@@ -1,0 +1,925 @@
+\documentclass[9pt,mathserif]{beamer}
+
+%% \usepackage{pgfpages}
+%% %\setbeamertemplate{note page}[plain]
+%% %\setbeameroption{show notes on second screen=bottom}
+
+\usepackage[spanish, es-noshorthands]{babel} 
+\usepackage[utf8]{inputenc}
+
+
+
+
+\usepackage{textpos} %textblock
+%% \usepackage{tikz,pgfplots}
+%% %\setbeamertemplate{navigation symbols}{}
+
+%% %%%%\usecolortheme{rose}
+%% %\usecolortheme{seahorse}
+%% %\usetheme{Copenhagen}
+%% %\usetheme{Warsaw}
+\usetheme[width=3\baselineskip]{Berkeley}
+\usecolortheme{spruce}   % color verde lindo
+%% \usecolortheme{beaver}
+
+
+%% %\usepackage[style=verbose,backend=biber]{biblatex}
+%% %\addbibresource{enief2016.bib}
+
+%% \usepackage{subfigure}
+%% \usepackage{bm}
+
+%% \setbeamertemplate{bibliography item}[text]
+
+%% \pgfplotsset{
+%%   every tick label/.append style={font=\scriptsize}, % font size grid numbers
+%%   every axis label/.style={font=\scriptsize}, % font size labels 
+%%   every axis x label/.style={at={(ticklabel cs: 0.5)}, anchor=north, yshift=1.5mm},
+%%   every axis y label/.style={at={(ticklabel cs: 0.5)}, anchor=north, xshift=-3mm},
+%%   %every x tick scale label/.style={at={(1,0)},xshift=1pt,anchor=south west,inner sep=0pt},
+%%   every axis/.append style={enlargelimits=false, max space between ticks=28pt, minor y tick num=4,
+%%   minor x tick num=4, major tick style=thick},
+%%   every axis legend/.append style={draw=none, legend cell align=left, font=\scriptsize},
+%%   every axis plot/.append style={line width=0.7pt}, 
+%%   ylabel style={rotate=90}, % compat=1.3
+%%   %  every axis/.append style={line width=1pt}
+%%   select coords between index/.style 2 args={
+%%     x filter/.code={
+%%         \ifnum\coordindex<#1\def\pgfmathresult{}\fi
+%%         \ifnum\coordindex>#2\def\pgfmathresult{}\fi  } },
+%%   cycle list ={black},
+%%   legend style={fill=none}
+%% }
+%% %\definecolor{Mycolor1}{RGB}{51,51,178}  % no lo uso
+%% %% \definecolor{Mycolor2}{RGB}{204,229,255}   % azul
+%% %% \setbeamercolor{bgcolor}{fg=black,bg=Mycolor2}
+
+%% \usepackage{tikz}
+%% \usetikzlibrary{arrows.meta,shapes.arrows}
+
+% TITLE PAGE ----------------------------------------------------------------------------------
+%\logo{\includegraphics[width=0.75cm,height=0.75cm]{figuras/ib.png}}
+
+\title[]{MODELADO COMPUTACIONAL DEL COMPORTAMIENTO HIDRODINÁMICO DE ELEMENTOS COMBUSTIBLES NUCLEARES}
+\author[]{\large{Julia Martorana, Exequiel Fogliatto, Federico Teruel, Enzo Dari y Mariano Cantero}}
+\institute{\normalsize{Departamento de Mecánica Computacional \\ Centro Atómico Bariloche \\  Comisión Nacional de Energía Atómica \\  Instituto Balseiro - Universidad Nacional de Cuyo}}
+\date{}
+% -----------------------------------------------------------------------------------------------
+
+\begin{document}
+\renewcommand{\tablename}{}                         % Reemplaza la palabra Cuadros, por 'nada' 
+\renewcommand{\figurename}{}                        % Reemplaza la palabra Cuadros, por 'nada'
+
+
+%% \frame[plain]{
+%% \begin{center}
+%%   \titlepage
+%%   \end{center}
+%%   %% \vspace{-10mm} \titlepage
+%%   %% \begin{textblock}{15}(2.25,-1.0)
+%%   %%   \normalsize{ XXIII Congreso sobre Métodos Numéricos y sus Aplicaciones} \\
+%%   %% \end{textblock}
+  
+%%   %% \begin{textblock}{5}(-0.7,-12.75)
+%%   %%   \includegraphics[width=1cm]{figuras/ib.png}
+%%   %% \end{textblock}
+%%   %% \begin{textblock}{5}(-0.875,-10.75)
+%%   %%   \includegraphics[width=1.2cm]{figuras/cuyo.jpeg}
+%%   %% \end{textblock}
+%%   %% \begin{textblock}{5}(13.15,-12.75)
+%%   %%   \includegraphics[width=1.15cm]{figuras/CNEA.jpg}
+%%   %% \end{textblock}
+  
+%%   %% \begin{textblock}{5}(0,-1.75)
+%%   %%   \includegraphics[width=1.5cm]{figuras/ENIEF2017.png}
+%%   %% \end{textblock}
+%% }
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[plain]
+  \titlepage
+  \begin{textblock}{5}(-0.5,-0.25)
+    \includegraphics[width=1.15cm]{figuras/ENIEF2017.png}
+  \end{textblock}
+  \begin{textblock}{5}(12.25,-0.5)
+    \includegraphics[width=1.15cm]{figuras/CNEA.jpg}
+  \end{textblock}
+  \centering
+  \normalsize{XXIII Congreso sobre Métodos Numéricos y sus Aplicaciones} \\
+\end{frame}
+\endgroup
+
+% -----------------------------------------------------------------------------------------------
+% INDICE 
+%% \frame[plain]{
+%%   \frametitle{Contenidos}
+%%   %	\begin{minipage}{\textwidth}
+%%    \tableofcontents 
+%%   %\end{minipage}
+%% }
+
+%% % -----------------------------------------------------------------------------------------------
+ \section{Introducción}
+
+\frame{
+  \frametitle{Introducción}
+  - Elementos combustibles\\
+  - Características del flujo\\
+  - Por qué estudiar
+
+}
+\section{Herramientas}
+\frame{
+  \frametitle{Herramientas (?)}
+  - OpenFOAM\\
+  - Modelo de turbulencia\\
+  - Por qué estudiar
+
+}
+ \section{Mallado}
+\frame{
+  \frametitle{Mallado (?)}
+  - Snappy\\
+  - Figuras
+}
+\section{Resultados}
+\subsection{Modelos de turbulencia}
+\frame{
+  \frametitle{Modelos de turbulencia}
+}
+
+\subsection{EC ATUCHA}
+\frame{
+  \frametitle{Elemento combustible símil ATUCHA}
+  \framesubtitle{Pérdida de carga}
+  \begin{figure}[!htb]
+    \center
+    \includegraphics[width=10cm]{figsATUCHA/US_DS.png}
+    %\label{fig:geom}
+  \end{figure}
+}
+
+\frame{
+  \frametitle{Elemento combustible símil ATUCHA}
+  \framesubtitle{Pérdida de carga}
+  \begin{figure}[!htb]
+    \center
+    \includegraphics[width=8cm]{figsATUCHA/US_DS_fit_Q1.png}
+    %\label{fig:geom}
+  \end{figure}
+
+  \begin{table}[ht]
+        \centering
+        \begin{tabular}{c | c | c | c }
+            \bf Caudal $(m^3/s)$  & \bf $\Delta P_{sim}$  & \bf $\Delta P_{med}$ & \bf Diferencia (\%)  \\
+            \hline
+            \hline
+            $Q_1=0.90 10^{-3}$ & 794.15  & 1246.43 & 36.3 \\
+            $Q_2=1.72 10^{-3}$ & 2716.69 & 3910.64 & 30.5\\
+            $Q_3=2.01 10^{-3}$ & 3640.50 & 5220.35 & 30.3\\
+          %  OpenOffice & Porquer\'ia\\
+            %\bottomrule
+        \end{tabular}
+        \caption{Valores de pérdida de carga local.}
+        \label{tab:DP}
+  \end{table}
+  
+}
+
+\subsection{EC CAREM}
+\frame{
+  \frametitle{Elemento combustible símil CAREM}
+}
+
+\section{Conclusiones}
+\frame{
+  \frametitle{Conclusiones}
+}
+
+
+%%    \framesubtitle{Flujos estratificados}
+
+%% \begin{textblock}{7}(0,-4)
+%% 	\includegraphics[width=6cm]{figsINTRO/abad_image2.png} \\
+%%     \scriptsize{Flujo secundario y evolución de un meandro en un canal de lecho rugoso \cite{Abad}.}
+%% \end{textblock}	
+
+%% \begin{textblock}{4}(8.7,-3.75)
+%% 	\begin{figure}
+%% 	  \includegraphics[width=3cm, height=5cm]{figsINTRO/meander_new_guinea_parker.png} \\
+%% 		\scriptsize{The meandering Fly River, Papua New Guinea. W. E. Dietrich \cite{Parker}.}
+%% 	\end{figure}
+%% \end{textblock}
+
+%% \begin{textblock}{10}(-1,1)
+%% 	\begin{figure}
+%% 		\includegraphics[width=6cm]{figsINTRO/amazon_fan_pirmez_1995.png} \\
+%% 		\scriptsize{Canal submarino en el Amazonas \cite{Pirmez}.}
+%% 	\end{figure}
+%% \end{textblock}
+
+%% \note{Los flujos estratificados son aquellos en que existe una variación espacial de la densidad del fluido. En los canales abiertos, por ejemplo, existe una variación discreta formada por fluido de aire y de agua. Cuando existe flujo secundario en un canal abierto se producen efectos de socavación en la margen externa y deposición en la margen interna. En las figuras se muestra el estudio de la evolución de un meandro y los meandros formados en el río Papua en Nueva Guinea.
+%%   Otro ejemplo de flujo estratificado son las corrientes de gravedad que comprenden las avalanchas, las plumas volcánicas y las corrientes de turbidez. Estas últimas pueden ocurrir por diferencia de temperatura, de salinidad o por presencia de sedimentos y generan canales submarinos como el que se muestra en la figura. Este transporte y deposición da origen a reservorios oceánicos.}
+%% }
+
+%% \frame{
+%%   \frametitle{Introducción}
+%%     \framesubtitle{Flujos secundarios}
+%%     % tipos de flujo secundario, figuras de ejemplos (hay otro flujo del tipo II?)
+%%     \begin{minipage}[t]{0.45\textwidth}
+%%       \centering
+%%       Flujo secundario de primer tipo
+%%       \begin{figure}[!htb]
+%% 	\center
+%% 	\includegraphics[width=2.75cm]{figsINTRO/secondary_abad.png}
+%%       \end{figure}
+%%       \scriptsize{Flujo secundario en un canal curvo \cite{Abad10}.}
+%%     \end{minipage}
+%%     %
+%%     \begin{minipage}[t]{0.45\textwidth}
+%%       \centering
+%%       Flujo secundario de segundo tipo
+%%       \begin{figure}[!htb]
+%% 	\center
+%% 	\includegraphics[width=3.25cm]{figsINTRO/corner.png}
+%%       \end{figure}
+%%       \scriptsize{Flujo secundario en una esquina. \cite{Gessner65}}
+%%     \end{minipage}
+
+%%     \pause
+%%   % \begin{textblock}{15}(-0.5,1.5)
+%%   \begin{block}{Ecuación de vorticidad media en dirección del flujo} %\scriptsize{(Flujo completamente desarrollado)}}
+%%     \footnotesize{
+%%       \begin{align}
+%%         \overline{u} \frac{\partial \overline{\omega}_x}{\partial x} + \overline{v} \frac{\partial \overline{\omega}_x}{\partial y} + \overline{w} \frac{\partial \overline{\omega}_x}{\partial z} =  \frac{1}{Re} &\bigg ( \frac{\partial^2 \overline{\omega}_x}{\partial x^2} +  \frac{\partial^2 \overline{\omega}_x}{\partial y^2} +  \frac{\partial^2 \overline{\omega}_x}{\partial z^2}\bigg ) \nonumber \\ + \quad  \overline{\omega}_x \frac{\partial \overline{u}} {\partial x}  + \overline{\omega}_y \frac{\partial \overline{u}} {\partial y} + & \overline{\omega}_z  \frac{\partial \overline{u}} {\partial z} \quad  + \quad  \frac{\partial}{\partial y \partial z} (\overline{w'^2} - \overline{v'^2} ) \quad +\quad  \bigg ( \frac{\partial^2}{\partial^2 z} - \frac{\partial^2}{\partial^2 y} \bigg ) \overline{v'w'} \nonumber
+%%       \end{align}
+%%     }
+%%     %
+%%     \end{block}
+
+%%   %  \noindent donde
+%%     \footnotesize{
+%%     \begin{align}
+%%       \overline{\omega}_x = \frac{\partial \overline{w}}{\partial y} - \frac{\partial \overline{v}}{\partial z}; \ \ \ \overline{\omega}_y = \frac{\partial \overline{u}}{\partial z} - \frac{\partial \overline{w}}{\partial x} \ \ \ \text{y}\ \overline{\omega}_z = \frac{\partial \overline{v}}{\partial x} - \frac{\partial \overline{u}}{\partial y} \nonumber
+%%     \end{align}}
+%%  %   \end{textblock}
+    
+%%  %  \noindent son las componentes de vorticidad media. La deducción de esta ecuación se presenta en la sección~\ref{sec:A_vort}.
+%%     \note{El flujo secundario se clasifica en dos tipos. El tipo I corresponde a aquellos flujos que se generan por la inclinación del vector vorticidad. Por ejemplo en una curva de un canal abierto se da la circulación mostrada: hacia la margen interna por el fondo del canal y en sentido inverso en la superficie del canal. Este tipo de flujo puede existir tanto en flujo laminar como en flujo turbulento pero en el caso del flujo secundario del tipo II se genera sólo en presencia de turbulencia. Un ejemplo de este tipo de flujo es el flujo secundario que se genera en una esquina, como se muestra en la figura. En este caso, se produce una recirculación desde el centro hacia las esquinas por las bisectrices de las mismas y luego se produce una circulación por las paredes hacia las bisectrices de las mismas.
+      
+%%       El Flujo secundario influye en el flujo principal y es importante su estudio en problemas donde ocurre erosión y transporte de sedimentos, dispersión de contaminantes y trasnferencia de calor entre otros.     
+%%       Las contribuciones de cada tipo de flujo secundario pueden analizarse a partir de la ecuación de vorticidad media en dirección del flujo. Los términos de la parte superior de esta ecuación corresponden respectivamente a los términos convectivos y difusivos de la vorticidad media. Los términos en la línea inferior estan asociados al flujo secundario. La elongación (alargamiento, estiramiento) y la inclinación de los vórtices producidos por el gradiente de velocidad media en dirección del flujo ($\overline{u}$) ocurren en flujos secundarios del primer tipo. Los términos restantes son los responsables del flujo segundario de segundo tipo: la diferencia de las tensiones de Reynolds transversales y la componente secundaria (?) de la tensión de Reynolds ($\overline{v'w'}$) (deviatoric shear stress). }
+%% }
+
+%% \frame{
+%%   \frametitle{Introducción}
+%%   %      \framesubtitle{Efectos de flujos secundarios}
+%%   \framesubtitle{Flujo secundario en corrientes de turbidez}
+
+%%   \begin{minipage}[t][][b]{0.45\textwidth}
+%%   \begin{block}{Efectos de estratificación}
+%%     \begin{itemize}
+%%     \item Sobre la turbulencia.
+%%     \item \color<2->[rgb]{1,0,0} {Sobre el forzado en el flujo}.
+%%       \end{itemize}
+%%   \end{block}
+
+%%   \hspace{2.25cm}\tikz\draw<3->[-Latex,line width=2pt, color=red] (4,0.75) -- (4,0);
+
+%%   \onslide<3->{Gradiente de presión no uniforme en la vertical.}
+%%   \end{minipage}
+%%   %
+%%   \pause
+%%   \begin{minipage}[t][][b]{0.5\textwidth}
+%%     \centering
+%% %    figura de dispersión de contaminantes
+%%     \includegraphics[width=3.5cm]{figsINTRO/sequeiros_densidad.png} \\
+%%     \scriptsize{Perfiles de densidad en corrientes de turbidez \cite{Sequeiros}.}
+%%   \end{minipage}
+%%  % \pause 
+%% %\pause
+%%    \begin{minipage}[t][][b]{0.3\textwidth}
+%%   \begin{block}<4->{Flujos secundarios}
+%%     \begin{itemize}
+%%     \item Tipo I.
+%%       \item \color<5->[rgb]{1,0,0} {Tipo II.}
+%%       \end{itemize}
+%%     \end{block}
+%%   \end{minipage}
+%%    %
+%%   \begin{minipage}[t][][b]{0.6\textwidth}
+%%   \begin{alertblock}<6->{Trabajo actual}
+%%     \begin{itemize}
+%%     \item Flujo turbulento en ducto recto de sección rectangular.
+%%     \item Gradiente de presión lineal en la vertical.
+%%       \item Variaciones en flujo secundario.
+%%       \end{itemize}
+%%     \end{alertblock}
+%%      \end{minipage}
+     
+%%    \note{La estratificación produce dos efectos en el flujo. Uno es sobre el forzado del mismo y el otro es sobre la turbulencia. En esta instancia de trabajo, nos focalizamos en el primero de estos efectos. Como las corrientes de turbidez poseen perfiles de densidad como se muestra en la figura, para el estudio de un forzado de esta forma, en este trabajo imponemos gradientes de presión no uniforme en la vertical para conducir el flujo.
+
+%%      El objetivo es estudiar las variaciones que provocan estos gradientes sobre el flujo secundario. También en esta instancia, que corresponde a mi maestría, nos concentramos en el flujo secundario de segundo tipo, y estudiaré los efectos sobre el primer tipo durante mi doctorado.
+
+%%      Por lo tanto, en este trabajo se analizan las variaciones en el flujo secundario tipo II que se producen por el forzado variable linealmente en la direccion vertical en un flujo turbulento en un ducto de sección rectangular.
+%%      }
+%% }
+%% % -----------------------------------------------------------------------------------------------
+
+%% \section{Modelo matemático}
+
+%% \frame{
+%%   \frametitle{Modelo matemático}
+  
+%% %  \begin{textblock}{10}(-0.5,-4.5)
+%%    \begin{block}{Ecuación de Navier-Stokes}   
+%%     \begin{align}
+%%       \frac{\partial \tilde{\mathbf{u}}} {\partial \tilde{t}} + \tilde{\mathbf{u}} \cdot \nabla \tilde{\mathbf{u}}  =   -\nabla \tilde{p}   + \frac{1} {Re_{\tau}} \nabla ^2 \tilde{\mathbf{u}} + \textbf{F}, \nonumber \\
+%%       \nabla \cdot \tilde{\mathbf{u}} =  0 \nonumber
+%%     \end{align}
+%%       \end{block}
+%%     %
+%% %    \vspace{-5mm}
+%%     \begin{itemize}
+%%     \item $\tilde{\mathbf{u}} = \{\tilde{u}, \tilde{v}, \tilde{w} \}$ es el campo de velocidades adimensional.
+%%     \item $\tilde{p}$ es la presión adimensional.
+%%     \item \textbf{F}$=\{\text{F}_x(y),0,0\}$ es el gradiente de presión medio no uniforme en la vertical que fuerza el flujo en la dirección.
+%%     \end{itemize}
+
+  
+%%    \begin{minipage}[b]{0.45\textwidth}
+%%     $Re_{\tau}=u_{\tau}\,h/\nu$ \\[5pt]
+%%     $\nu$: viscosidad cinemática %del fluido.
+%%    \end{minipage}
+%%    \begin{minipage}[bt]{0.4\textwidth}
+%%      \begin{figure}[!htb]
+%%        \center
+%%       \input{figsCODE/geom_cart.tex}
+%%       \label{fig:geom}
+%%      \end{figure}
+%%    \end{minipage}
+   
+%%    \note{Para llevar a cabo los análisis propuestos se resuelven las ecuaciones de navier stokes que estan formadas por la ecuación de conservacion de momento y la ecuación de conservacion de masa. La primera  posee un término transitorio, un término convectivo, el término correspondiente a la presión, el término difusivo y un término de gradiente de presión medio aplicado. Este gradiente es el que realiza el forzado del flujo. En este caso, posee únicamente la componente en dirección del flujo y es el que varía en la dirección vertical $y$ de acuerdo con la figura que muestra la geometría del ducto analizado.   }
+%% }
+
+%% % -----------------------------------------------------------------------------------------------
+%% \section{Código de cálculo}
+%% \frame{
+%%   \frametitle{Código de cálculo}
+%%   \framesubtitle{Características}
+   
+%%   \begin{itemize}
+%%   \item Código pseudoespectral paralelizado con OpenMP.
+%%   \item Resuelve las ecuaciones de Navier-Stokes mediante el Método de Paso Fraccionado.
+%%   \item Condiciones de borde:
+%%     \begin{itemize}
+%%     \item Paredes en dos direcciones,
+%%     \item Una dirección periódica.
+%%     \end{itemize}	
+%%   \end{itemize}
+  
+%%   \begin{itemize}
+%%   \item Expansiones de Fourier y expansiones de Chebyshev.
+%%   \item Discretización temporal
+%%     \begin{itemize}
+%%     \item Término advectivo: Adams-Bashforth de 3er orden.
+%%     \item Término difusivo: Crank-Nicolson.
+%%     \end{itemize}
+%%   \item Discretización espacial
+%%     \begin{itemize}
+%%     \item Puntos equidistantes en la dirección de Fourier ($x$).
+%%     \item Puntos de cuadratura Gauss-Lobatto en las direcciones $z$ e $y$.
+%%     \end{itemize}
+%%   \end{itemize}
+
+%%   \note{Los cálculos de este trabajo se realizaron con un código pseudo-espectral  paralelizado con OpenMP. Este código resuelve las ecuaciones de N-S mediante el Método de PAso fraccionado. Para las discretizaciones temporales se utiliza un esquema de A-B de tercer orden para el término difusivo y un esquema Crank-Nicolson para el término advectivo. Los campos se aproximan con expansiones de Fourier y expansiones de Chevyshev. En la dirección del flujo el canal es periódico y se discretiza el domino con puntos equiespaciados. En las direcciones restantes, transversales al flujo principal, se imponen condiciones de borde de pared y se discretiza el dominio con puntos de cuadratura Gauss-Lobatto.}
+%% }
+
+%%  % -----------------------------------------------------------------------------------------------
+%%  \section{Resultados}
+%%   \frame{
+%%    \frametitle{Resultados}
+%%    \framesubtitle{Gradiente de presión no uniforme}
+
+%%    %    \vspace{-4mm}
+%%    \begin{minipage}[b]{0.5\textwidth}
+     
+%%    \begin{equation*}
+%%       \begin{aligned}
+%%           F_x= \beta (1-y) + 2, \quad \mbox{para CC y CL} \\
+%%           F_x = \frac{-4 \beta}{e^{-2 \beta} -1 } e^{- \beta y} \quad \mbox{para CE}
+%%       \end{aligned}
+%%    \end{equation*}
+%%    \end{minipage}
+%%    %\noindent where the coefficient values $\beta$ are listed in the table~\ref{tab:cases}. For the studied cases
+%%    \begin{minipage}[b]{0.35\textwidth}
+%%        \begin{equation*}
+%%           \int_0^2  F_x  dy =4
+%%        \end{equation*}
+%%    \end{minipage}
+%% %
+%% \begin{table}[htb!]
+%%   \centering
+%%   \scriptsize{
+%%   \begin{tabular} {|c || c |c |c |c |c |c |c| }
+%%     \hline  Caso & $\beta $ & $u_b/u_{\tau,avg}$ & $Re_b$ & $y_{u,max}$  & $u_{\tau,t}$  &  $u_{\tau,b}$ &   $u_{\tau,h}$   \\
+%%     \hline
+%%     \hline 
+%%     CC        &  0.0   & 15.12  & 2721  &  1.00  & 1.072  & 1.072  & 1.072 \\
+%%     CL1.5     & 1.5  & 14.90  & 2683  &  0.86  & 1.026   & 1.010  &  1.070 \\
+%%     CL2       & 2.0  & 14.72  & 2650  &  0.81  & 1.016   & 0.982  &  1.061 \\
+%%     CE3       & 3.0  & 13.63  & 2381  &  0.36  & 0.869  & 1.225  &  0.909 \\
+%%      CE5       & 5.0  & 11.98  & 2157  & 0.22  & 0.789  & 1.374  &  0.824 \\
+%%       \hline 
+%%   \end{tabular}
+%%   }
+%%    % \caption{Cases studied in this work}
+%%     \label{tab:cases}
+%% \end{table}
+
+%%     \vspace{-0.35cm}
+%%    \begin{figure}[hbt!]
+%%      \center
+%%      \hspace{-7.5mm}
+%%      \subfigure{
+%%        \includegraphics[width=3.5cm, height=4.5cm]{figsINTRO/sequeiros_densidad.png}
+%%       % \scriptsize{Perfiles de densidad \cite{Sequeiros}.}
+%%      }
+%%      \subfigure{
+%%        \input{figsRESUL/grad_P.tikz}
+%%        }
+%%    \end{figure}
+%%    \hspace{1.5cm} \scriptsize{Perfiles de densidad \cite{Sequeiros} (izquierda), gradientes de presión medio (derecha).}
+      
+%% %%    \note{A continuación se muestran los resultados obtenidos del cálculo de un flujo turbulento forzado por un gradiente no uniforme en la vertical. Esta es la expresión de la variación lineal del gradiente para cada caso estudiado. Los valores de los coeficientes $\beta$ se muestran en la tabla. Para todos los casos esta integral posee el mismo valor, por lo que el flujo neto es el mismo para todos los casos analizados. La variación del gradiente de presión medio con respecto a la vertical se muestra en la figura del medio y se presenta a modo de comparación a la izquierda los perfiles de densidad que se producen en las corrientes de turbidez. El objetivo es modelar el forzado producido en estas corrientes. 
+
+%% %%      En la figura de la derecha se presenta la velocidad media en la dirección del flujo para los casos estudiados. Se observa que la ubicación del valor máximo desciende con respecto al caso base, CC, que corresponde al flujo forzado con un gradiente uniforme en la vertical. La diferencia es muy pequeñas para los casos CL0.5 y CL1 pero significativa en el caso CL2.
+%% %%      Si bien es pequeña la diferencia para los casos CL0.5 y CL1 más adelante mostrare que existe un efecto del gradiente no uniforme sobre el FS.
+%% %%      En la tabla se presentan los valores de estas ubicaciones así como también los valores de velocidad media y de velocidad de corte local en las paredes horizontales y en las paredes verticales. Se puede observar que los valores de la velocidad de corte en las paredes horizontales disminuyen con respecto al caso CC.}
+%% %%    %La estadistica del flujo medio se obtuvo promediando en el tiempo y en la dirección del flujo los valores instantáneos. Para los casos CL además se realizó el promedio entre las dos mitades verticales de la sección aprovechando la simetría del problema.}
+%%   }
+
+%%   \frame{
+%%    \frametitle{Resultados}
+%%    \framesubtitle{Velocidad principal}
+%%  %%  \begin{figure}[htb!]
+%%  %%  \centering
+%%  %%  %\subfigure[] {\input{figsRESUL/vel_0.5.tikz} \label{fig:vel_u_0.5} } \hspace{1cm}
+%%  %%  \subfigure[] {\input{figsRESUL/vel.tikz} \label{fig:vel_u_1}}
+%%  %% %\caption{Vertical variation of the streamwise velocity. (a) At $z/h=0.5$. (b) At $z/h=1$ }
+  
+%%   %% \end{figure}
+%%    \begin{textblock}{5}(-0.25,-7.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \vspace{7mm}
+%%        \subfigure{\input{figsRESUL/vel.tikz} }
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \pause
+%%    %% \begin{textblock}{3}(-0.95,-4.5)
+%%    %%   \scriptsize{Caso CC}
+%%    %% \end{textblock}
+
+%%    \begin{textblock}{5}(7.5,-6.9)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/constante/vel_u_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(6.65,-4.5)
+%%      \scriptsize{Caso CC}
+%%    \end{textblock}
+
+   
+%%    \begin{textblock}{5}(0.25,0.5)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/lineal_2/vel_u_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.75,2.5)
+%%      \scriptsize{Caso CL2}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3.75}(6.65,2.5)
+%%      \scriptsize{Caso CE5}
+%%    \end{textblock}
+   
+%%    \begin{textblock}{5}(7.5,0.5)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_5/vel_u_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%      \end{textblock}
+
+
+%%   }
+%%   \frame{
+%%       \frametitle{Resultados - \footnotesize{Patrones de flujo secundario}}
+%% %   \framesubtitle{Patrones de flujo secundario}
+   
+%%    \begin{textblock}{5}(-0.25,-6.9)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.7cm]{figsRESUL/constante/magFS_ub.png}};  \node [anchor=south west] (fig2) at (-0.44,-0.32){\includegraphics[width=4.275cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,-4.5)
+%%      \scriptsize{Caso CC}
+%%    \end{textblock}
+
+%%    \begin{textblock}{5}(7.5,-6.9)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.7cm]{figsRESUL/lineal_2/magFS_ub.png}};  \node [anchor=south west] (fig2) at (-0.44,-0.32){\includegraphics[width=4.275cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(6.55,-4.5)
+%%      \scriptsize{Caso CL2}
+%%    \end{textblock}
+
+   
+%%    \begin{textblock}{5}(-0.25,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.7cm]{figsRESUL/exponencial_3/magFS_ub.png}};  \node [anchor=south west] (fig2) at (-0.44,-0.32){\includegraphics[width=4.275cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,2.5)
+%%      \scriptsize{Caso CE3}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3.75}(6.65,2.5)
+%%      \scriptsize{Caso CE5}
+%%    \end{textblock}
+   
+%%    \begin{textblock}{5}(7.5,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.7cm]{figsRESUL/exponencial_5/magFS_ub.png}};  \node [anchor=south west] (fig2) at (-0.44,-0.32){\includegraphics[width=4.275cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%      \end{textblock}
+
+  
+%%    \note{Si bien se observó que no existe variación significativa en la velocidad principal con respecto al caso base CC, para los casos CL05 y Cl1, el patrón de flujo secundario sí se ve modificado lo que muestra el efecto del gradiente de presión medio no uniforme sobre el flujo secundario.
+%%      %en un flujo turbulento en un ducto cuadrado consiste en cuatro pares de vórtices contra-rotantes ubicados en cada esquina de la sección. Se observa en este caso, que el flujo circula desde el centro de la sección por las bisectrices de las esquinas hacia las mismas y luego cerca de las paredes hacia las bisectrices de las muros donde se dirige nuevamente hacia el centro.
+
+%%      Para estos casos se incrementa el tamaño de los vórtices laterales de la mitad superior y disminuye el tamaño de los de la mitad inferior. En estos casos se mantiene la estrucutra de cuatro vórtices. % se mantienen, aunque disminuye la magnitud de los cercanos a la pared vertical con respecto a CC. Los vórtices superiores cercanos a las paredes vertical, se extienden hacia el centro de la sección y su magnitud también se incrementa. En cambio, el tamaño de los vórtices superiores, cercanos a la pared horizontal superior, disminuye.
+%%      Sin embargo, en el caso CL2, esta extensión de los vórtices superiores laterales se incrementa, alcanzando la mitad inferior de la sección. Y provocando una configuración muy diferente al caso base. La circulación sobre estos vortices ocupa toda la altura de la sección del ducto.}
+  
+%%      %se observa un incremento de magnitud importante en los vórtices cercanos a las paredes verticales y a la pared horizontal inferior. Los vórtices laterales superiores se extienden hacia la mitad inferior de la sección}
+%%   }
+
+%%  % -------------------------------------------------------------------------------------------------------
+%%  \frame{
+%%    \frametitle{Resultados}% - \scriptsize{Velocidad secundaria vertical}}
+%%    \framesubtitle{Velocidad secundaria vertical}
+ 
+%% \begin{textblock}{5}(-0.25,-6.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/constante/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,-4.4)
+%%      \scriptsize{Caso CC}
+%%    \end{textblock}
+
+%%    \begin{textblock}{5}(7.5,-6.8)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/lineal_2/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(6.55,-4.4)
+%%      \scriptsize{Caso CL2}
+%%    \end{textblock}
+
+   
+%%    \begin{textblock}{5}(-0.25,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_3/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,2.5)
+%%      \scriptsize{Caso CE3}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3.75}(6.65,2.5)
+%%      \scriptsize{Caso CE5}
+%%    \end{textblock}
+   
+%%    \begin{textblock}{5}(7.5,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_5/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+%%      %%  \begin{textblock}{10}(6,7.5)
+%%      %% \scriptsize{Contornos de velocidad vertical para los casos analizados.}
+%%      %%  \end{textblock}
+
+%%    \note{Aquí se muestra la distribución en la sección transversal de la velocidad secundaria $\overline{v}$ para el caso base CC y los casos analizados  Loss casos CL0.5 y CL1 presentan un incremento de tamaño de las celdas con respecto al caso CC, sobre todo de las celdas ubicadas en la mitad superior de la sección que se extienden hacia el centro.
+
+%%     %En las figuras se muestran las velocidades secundarias $\overline{v}$ en dos líneas verticales de la sección, en el centro y en el cuarto. Para los casos CL0.5 y CL1 se observa que a pesar de la similitud entre las velocidades en dirección del flujo con respecto al caso CC, las velocidades secundarias presentan claras diferencias con respecto al caso base, lo que muestra el efecto del gradiente de presión medio no uniforme sobre el flujo secundario.  Para el caso CL2 las diferencias son más importantes. En el centro de la sección (figura de la derecha) se observa un incremento importante en los dos tercios de la vertical mientras que en el cuarto de la sección se observa un aumento en el centro y un cambio de signo en el tercio inferior con respecto al signo de CC.
+
+%%      %Las figuras siguientes muestran la variación de la velocidad vertical en la sección transversal del ducto. Los casos CL0.5 y CL1 presentan un incremento de tamaño de las celdas con respecto al caso CC.
+%%      El caso CL2 presenta un patrón muy diferente al caso CC. Las velocidades verticales positivas se producen casi exclusivamente en el centro de la sección, mientras que las negativas ocurren cerca de las paredes verticales. Con respecto a CC, se incrementan las negativas laterales y las positivas centrales. }
+
+%%  }
+
+%%  % ------------------------------------------------------------------------------------------------
+%%    \frame{
+%%    \frametitle{Resultados}
+%%     \framesubtitle{Turbulencia}
+
+%%     % FIGURA SHEAR ALL UtauBottom
+%%     \begin{figure}[hbt!]
+%%       \setcounter{subfigure}{0}
+%%   \centering
+%%   \subfigure[] { \input{figsRESUL/shear_all_b.tikz}\label{fig:total_all_b} } \hspace{-2mm}
+%%   \subfigure[] { \input{figsRESUL/upvp_all_b.tikz}\label{fig:Re_all_b} } \hspace{-2mm}
+%%   \subfigure[] { \input{figsRESUL/dudy_all_b.tikz}\label{fig:visc_all_b} } 
+%%  \caption{\scriptsize{Perfiles en $z/h=1$. (a) Esfuerzo de corte total vertial $\tau_{tot,y}$. (b) Esfuerzo de Reynolds $-\overline{u'v'}$. (c) Gradiente de velocidad $\frac{1}{Re_{\tau}} \frac{\partial \overline{u}}{\partial y}$. Valores normalizados con la velocidad de corte local en el centro  de la pared inferior $u_{\tau,b}$. }}
+%%   % \label{fig:total_shear_all_b}
+%% \end{figure}
+%%    }
+
+%%  % ------------------------------------------------------------------------------------------------
+%%   \frame{
+%%    \frametitle{Resultados}
+%%     \framesubtitle{Turbulencia}
+
+%%     % FIGURA SHEAR UtauBottom UtauTop
+%%     \vspace{-5mm}
+%%     \begin{figure}[hbt!]
+%%            \setcounter{subfigure}{0}
+%%   \centering
+%%  \subfigure[] { \input{figsRESUL/shear_b_t.tikz}\label{fig:total_b_t}} 
+%%  \subfigure[] { \input{figsRESUL/upvp_b_t.tikz}\label{fig:Re_b_t} } 
+%%  \subfigure[] { \input{figsRESUL/dudy_b_t.tikz}\label{fig:visc_b_t} } 
+%%  \caption{\scriptsize{Perfiles en $z/h=1$. (a) Esfuerzo de corte total vertical $\tau_{tot,y}$. (b) Esfuerzo de Reynolds $-\overline{u'v'}$. (c) Gradiente de velocidad $\frac{1}{Re_{\tau}} \frac{\partial \overline{u}}{\partial y}$. Los valores correspondientes a la mitad superior de la sección están normalizados con el valor de la velocidad de corte local en el centro de la pared superior $u_{\tau,t}$ y los valores de la mitad inferior están normalizados con la velocidad de corte local en el centro de la pared inferior $u_{\tau,b}$ }}
+%% %%   %\label{fig:total_shear_b_t}
+%% \end{figure}
+
+
+%%   }
+%% % --------------------------------------------------------------
+%%    \frame{
+%%    \frametitle{Resultados}
+%%    \framesubtitle{Turbulencia: Esfuerzo de Reynolds $\overline{u'v'}$}
+ 
+%% \begin{textblock}{5}(-0.25,-6.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/constante/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,-4.4)
+%%      \scriptsize{Caso CC}
+%%    \end{textblock}
+
+%%    \begin{textblock}{5}(7.5,-6.8)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/lineal_2/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(6.55,-4.4)
+%%      \scriptsize{Caso CL2}
+%%    \end{textblock}
+
+   
+%%    \begin{textblock}{5}(-0.25,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_3/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,2.5)
+%%      \scriptsize{Caso CE3}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3.75}(6.65,2.5)
+%%      \scriptsize{Caso CE5}
+%%    \end{textblock}
+   
+%%    \begin{textblock}{5}(7.5,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_5/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    }
+
+%% % --------------------------------------------------------------
+%%    \frame{
+%%    \frametitle{Resultados}
+%%    \framesubtitle{Turbulencia: valores $rms$}
+
+%%    % FIGURA RMS  UtauBottom UtauTop
+%%     \hspace{-5mm}
+%%     \begin{figure}[hbt!]
+%%            \setcounter{subfigure}{0}
+%%   \centering
+%%  \subfigure[] { \input{figsRESUL/u_rms_b_t.tikz}}  \hspace{-2mm}
+%%  \subfigure[] { \input{figsRESUL/v_rms_b_t.tikz}}  \hspace{-2mm}
+%%  \subfigure[] { \input{figsRESUL/w_rms_b_t.tikz}} 
+%%    \caption{Profiles of $rms$ values at $z/h=1$. (a) $u_{rms}$. (b) $v_{rms}$. (c) $w_{rms}$. The values from the upper half are normalized with local friction velocity at the center of the upper wall $u_{\tau,t}$ and the values from the bottom half are normalized with local friction velocity at the center of the bottom wall $u_{\tau,b}$ }
+%%  \label{fig:rms_b_t}
+%% \end{figure}
+
+%%    }
+
+%%    % --------------------------------------------------------------
+%%    \frame{
+%%    \frametitle{Resultados}
+%%    \framesubtitle{Turbulencia: $u_{rms}$}
+ 
+%% \begin{textblock}{5}(-0.25,-6.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/constante/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,-4.4)
+%%      \scriptsize{Caso CC}
+%%    \end{textblock}
+
+%%    \begin{textblock}{5}(7.5,-6.8)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/lineal_2/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(6.55,-4.4)
+%%      \scriptsize{Caso CL2}
+%%    \end{textblock}
+
+   
+%%    \begin{textblock}{5}(-0.25,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_3/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3}(-0.95,2.5)
+%%      \scriptsize{Caso CE3}
+%%    \end{textblock}
+
+%%    \begin{textblock}{3.75}(6.65,2.5)
+%%      \scriptsize{Caso CE5}
+%%    \end{textblock}
+   
+%%    \begin{textblock}{5}(7.5,0.4)
+%%      \begin{figure}[!htb]
+%%        \center
+%%        \subfigure{
+%%          \begin{tikzpicture}[x=1cm,y=1cm]  
+%%            \node [anchor=south west] (fig1) at (0,0) {\includegraphics[width=4.2cm]{figsRESUL/exponencial_5/vel_v_ub.png}};  \node [anchor=south west] (fig2) at (-0.39,-0.29){\includegraphics[width=3.82cm]{figsRESUL/grid2_cut.png}};
+%%        \end{tikzpicture}    } \hspace{-10mm}
+%%      \end{figure}
+%%    \end{textblock}
+
+%%    }
+
+   
+%% %%    % -----------------------------------------------------------------------------------------------
+%%   \section{Conclusiones}
+%%   \frame{
+%%       \frametitle{Conclusiones}
+%%       \begin{itemize}
+%%         \setlength\itemsep{1em}
+%%    \item Se realizaron cálculos DNS de flujo turbulento en un ducto con un código pseudo-espectral paralelo.
+%% %%     \item Se validaron de los resultados obtenidos con casos ampliamente estudiados.
+%% %%     \item Se llevó a cabo el análisis del flujo secundario en flujos forzados por gradientes de presión no uniformes en la dirección vertical.
+%% %%       \begin{itemize}
+%% %%         \setlength\itemsep{0.7em}
+%% %%      % \item CL0.5 y CL1: distribuciones similares a CC. CL2: diferencias significativas con CC.
+%% %%       \item Velocidad en la dirección principal: descenso de la posición del valor máximo.
+%% %%       %\item Esfuerzo de Reynolds: disminución significativa en caso CL2.
+%% %%         %       \item Valores rms incrementos con respecto al caso CC.
+%% %%       \item Patrones de flujo secundario: extensión de vórtices.
+%% %%          \item Flujo secundario: variaciones de magnitud y cambios de dirección.
+%% %%       \item Esfuerzo de corte en las paredes: redistribución de valores máximos y mínimos. 
+%% %%       \item Energía cinética turbulenta: modificación de los patrones.
+%% %%       \end{itemize}
+%%            \end{itemize}
+%%   }
+  
+%% %%   %% \begin{frame}
+%% %%   %% \frametitle{R: Literature Review}
+%% %%   %% \setbeamerfont{footnote}{size=\tiny}
+%% %%   %% Huo et al. \footfullcite{Huo2002}
+%% %%   %% \end{frame}
+  
+%% %%  % -----------------------------------------------------------------------------------------------
+%% \begin{frame}
+%%   \frametitle{Referencias}
+%%   \scriptsize
+%%     \bibliographystyle{plain}
+%%     \bibliography{enief2017.bib}
+    
+%%         %\bibliographystyle{amsalpha}
+%%         %\bibliography{enief2016.bib}
+%%        % \printbibliography
+%% \end{frame}
+
+%% \frame{
+%%    \begin{textblock}{5}(0,-3.75)
+%%     \includegraphics[width=1cm]{figuras/ib.png}
+%%    \end{textblock}
+%%    \begin{textblock}{15}(4.5,1.25)
+%%     \normalsize{¡Gracias por su atención!}
+%%   \end{textblock}
+%%   \begin{textblock}{15}(2.25,5)
+%%     \normalsize{ XXIII Congreso sobre Métodos Numéricos y sus Aplicaciones}
+%%   \end{textblock}
+%%   \begin{textblock}{5}(0,4.25)
+%%     \includegraphics[width=1.5cm]{figuras/ENIEF2017.png}
+%%   \end{textblock}
+
+%%   \begin{textblock}{5}(5.5,-4.25)
+%%     \includegraphics[width=1.2cm]{figuras/cuyo.jpeg}
+%%   \end{textblock}
+%%   \begin{textblock}{5}(12,-4)
+%%     \includegraphics[width=1.25cm]{figuras/CNEA.jpg}
+%%   \end{textblock}
+
+%% }
+\end{document}
+
