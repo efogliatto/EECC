@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.3.13)  2 NOV 2017 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.10.17)  5 NOV 2017 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **presenta_enief2017.tex
 (./presenta_enief2017.tex
 LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 8 languages loaded.
+Babel <3.9l> and hyphenation patterns for 5 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasercs.sty
 Package: beamerbasercs 2013/12/25 (rcs-revision 31cc758a62ae)
@@ -972,46 +972,130 @@ Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemesp
 ruce.sty
 Package: beamercolorthemespruce 2012/03/07  (rcs-revision adfc58636b1f)
-) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip57
-\subfigcapskip=\skip58
-\subfigcaptopadj=\dimen197
-\subfigbottomskip=\skip59
-\subfigcapmargin=\dimen198
-\subfiglabelskip=\skip60
-\c@subfigure=\count155
-\c@lofdepth=\count156
-\c@subtable=\count157
-\c@lotdepth=\count158
+) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip61
-\subfig@bottom=\skip62
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen197
+\captionmargin@=\dimen198
+\captionwidth=\dimen199
+\caption@tempdima=\dimen200
+\caption@indent=\dimen201
+\caption@parindent=\dimen202
+\caption@hangindent=\dimen203
 )
-(./presenta_enief2017.aux
+\c@ContinuedFloat=\count155
+Package caption Info: beamer document class.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+\c@KVtest=\count156
+\sf@farskip=\skip57
+\sf@captopadj=\dimen204
+\sf@capskip=\skip58
+\sf@nearskip=\skip59
+\c@subfigure=\count157
+\c@subfigure@save=\count158
+\c@depth=\count159
+\c@subtable=\count160
+\c@subtable@save=\count161
+\sf@top=\skip60
+\sf@bottom=\skip61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box54
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen205
+\pgf@nodesepend=\dimen206
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen207
+\pgffor@skip=\dimen208
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count162
+\pgfplotmarksize=\dimen209
+)
+\tikz@lastx=\dimen210
+\tikz@lasty=\dimen211
+\tikz@lastxsaved=\dimen212
+\tikz@lastysaved=\dimen213
+\tikzleveldistance=\dimen214
+\tikzsiblingdistance=\dimen215
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count163
+\tikznumberofchildren=\count164
+\tikznumberofcurrentchild=\count165
+\tikz@fig@count=\count166
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count167
+\pgfmatrixcurrentcolumn=\count168
+\pgf@matrix@numberofcolumns=\count169
+)
+\tikz@expandcount=\count170
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+))) (./presenta_enief2017.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
 \openout1 = `presenta_enief2017.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1049,17 +1133,17 @@ LaTeX Font Info:    ... okay on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count159
-\scratchdimen=\dimen199
-\scratchbox=\box54
-\nofMPsegments=\count160
-\nofMParguments=\count161
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count162
-\MPscratchDim=\dimen200
-\MPnumerator=\count163
-\makeMPintoPDFobject=\count164
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count171
+\scratchdimen=\dimen216
+\scratchbox=\box59
+\nofMPsegments=\count172
+\nofMParguments=\count173
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count174
+\MPscratchDim=\dimen217
+\MPnumerator=\count175
+\makeMPintoPDFobject=\count176
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1076,8 +1160,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 41.
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring OFF on input line 44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1085,11 +1169,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count165
+\c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./presenta_enief2017.out) (./presenta_enief2017.out)
 \@outlinefile=\write5
@@ -1120,22 +1204,36 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 41.
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
+LaTeX Info: Redefining \includegraphics on input line 44.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = macro:->\ifx \@captype \@undefined \@latex@err
+or {\noexpand \caption outside figure or table}\@ehd \expandafter \@gobble \els
+e \refstepcounter \@captype \expandafter \@firstofone \fi {\@dblarg {\@caption 
+\@captype }}.
 
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
 (./presenta_enief2017.nav)
 <figuras/ENIEF2017.png, id=49, 301.125pt x 235.88126pt>
 File: figuras/ENIEF2017.png Graphic file (type png)
 
 <use figuras/ENIEF2017.png>
-Package pdftex.def Info: figuras/ENIEF2017.png used on input line 59.
+Package pdftex.def Info: figuras/ENIEF2017.png used on input line 62.
 (pdftex.def)             Requested size: 32.72049pt x 25.63028pt.
  <figuras/CNEA.jpg, id=51, 393.47pt x 380.42125pt>
 File: figuras/CNEA.jpg Graphic file (type jpg)
 
 <use figuras/CNEA.jpg>
-Package pdftex.def Info: figuras/CNEA.jpg used on input line 59.
+Package pdftex.def Info: figuras/CNEA.jpg used on input line 62.
 (pdftex.def)             Requested size: 32.72049pt x 31.6301pt.
  [1
 
@@ -1145,66 +1243,66 @@ Package pdftex.def Info: figuras/CNEA.jpg used on input line 59.
 File: figsINTRO/atucha2.jpg Graphic file (type jpg)
 
 <use figsINTRO/atucha2.jpg>
-Package pdftex.def Info: figsINTRO/atucha2.jpg used on input line 133.
+Package pdftex.def Info: figsINTRO/atucha2.jpg used on input line 136.
 (pdftex.def)             Requested size: 149.37697pt x 83.65092pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 136.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 136.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figsINTRO/EECC_atuchaI.jpg, id=84, 301.125pt x 225.84375pt>
+<figsINTRO/EECC_atuchaI.jpg, id=84, 301.125pt x 221.82875pt>
 File: figsINTRO/EECC_atuchaI.jpg Graphic file (type jpg)
 
 <use figsINTRO/EECC_atuchaI.jpg>
-Package pdftex.def Info: figsINTRO/EECC_atuchaI.jpg used on input line 133.
-(pdftex.def)             Requested size: 85.35826pt x 64.01807pt.
+Package pdftex.def Info: figsINTRO/EECC_atuchaI.jpg used on input line 136.
+(pdftex.def)             Requested size: 85.35826pt x 62.87997pt.
 
-<figsCAREM/CAREMfromCNEAfuelelement.jpg, id=85, 903.375pt x 602.25pt>
-File: figsCAREM/CAREMfromCNEAfuelelement.jpg Graphic file (type jpg)
+<figsINTRO/CAREMfromCNEAfuelelement.jpg, id=85, 903.375pt x 602.25pt>
+File: figsINTRO/CAREMfromCNEAfuelelement.jpg Graphic file (type jpg)
 
-<use figsCAREM/CAREMfromCNEAfuelelement.jpg>
-Package pdftex.def Info: figsCAREM/CAREMfromCNEAfuelelement.jpg used on input l
-ine 133.
+<use figsINTRO/CAREMfromCNEAfuelelement.jpg>
+Package pdftex.def Info: figsINTRO/CAREMfromCNEAfuelelement.jpg used on input l
+ine 136.
 (pdftex.def)             Requested size: 135.15059pt x 90.09467pt.
 
 <figsINTRO/carem.png, id=86, 351.3125pt x 484.81125pt>
 File: figsINTRO/carem.png Graphic file (type png)
 
 <use figsINTRO/carem.png>
-Package pdftex.def Info: figsINTRO/carem.png used on input line 133.
+Package pdftex.def Info: figsINTRO/carem.png used on input line 136.
 (pdftex.def)             Requested size: 85.35826pt x 117.7922pt.
 
-Overfull \vbox (0.25156pt too high) detected at line 133
+Overfull \vbox (0.25156pt too high) detected at line 136
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 133.
+(Font)              size <5> substituted on input line 136.
 
 [2
 
- <./figsINTRO/atucha2.jpg> <./figsINTRO/EECC_atuchaI.jpg> <./figsCAREM/CAREMfro
+ <./figsINTRO/atucha2.jpg> <./figsINTRO/EECC_atuchaI.jpg> <./figsINTRO/CAREMfro
 mCNEAfuelelement.jpg> <./figsINTRO/carem.png (PNG copy)>]
-<figsINTRO/freon2b.png, id=129, 1027.84pt x 716.6775pt>
+<figsINTRO/freon2b.png, id=130, 1027.84pt x 716.6775pt>
 File: figsINTRO/freon2b.png Graphic file (type png)
 
 <use figsINTRO/freon2b.png>
-Package pdftex.def Info: figsINTRO/freon2b.png used on input line 169.
+Package pdftex.def Info: figsINTRO/freon2b.png used on input line 172.
 (pdftex.def)             Requested size: 156.49014pt x 109.11545pt.
 
-<figsINTRO/freon4.png, id=130, 559.08875pt x 444.66125pt>
+<figsINTRO/freon4.png, id=131, 559.08875pt x 444.66125pt>
 File: figsINTRO/freon4.png Graphic file (type png)
 
 <use figsINTRO/freon4.png>
-Package pdftex.def Info: figsINTRO/freon4.png used on input line 169.
+Package pdftex.def Info: figsINTRO/freon4.png used on input line 172.
 (pdftex.def)             Requested size: 113.81102pt x 90.51157pt.
 
-Overfull \hbox (9.9493pt too wide) in paragraph at lines 169--169
+Overfull \hbox (9.9493pt too wide) in paragraph at lines 172--172
  [] 
  []
 
@@ -1212,165 +1310,200 @@ Overfull \hbox (9.9493pt too wide) in paragraph at lines 169--169
 
  <./figsINTRO/freon2b.png> <./figsINTRO/freon4.png>] [4
 
-] [5
-
 ]
-<figsATUCHA/2.png, id=236, 543.02875pt x 511.9125pt>
+<figsGEOM/salome_carem.png, id=203, 1072.005pt x 659.46375pt>
+File: figsGEOM/salome_carem.png Graphic file (type png)
+
+<use figsGEOM/salome_carem.png>
+Package pdftex.def Info: figsGEOM/salome_carem.png used on input line 238.
+(pdftex.def)             Requested size: 142.26378pt x 87.51437pt.
+
+Overfull \hbox (8.73051pt too wide) in paragraph at lines 238--238
+ [] 
+ []
+
+<figsGEOM/OpenFOAM_atucha.png, id=204, 998.73125pt x 665.48625pt>
+File: figsGEOM/OpenFOAM_atucha.png Graphic file (type png)
+
+<use figsGEOM/OpenFOAM_atucha.png>
+Package pdftex.def Info: figsGEOM/OpenFOAM_atucha.png used on input line 238.
+(pdftex.def)             Requested size: 113.81102pt x 75.83372pt.
+ [5
+
+ <./figsGEOM/salome_carem.png> <./figsGEOM/OpenFOAM_atucha.png (PNG copy)>]
+<figsATUCHA/2.png, id=240, 543.02875pt x 511.9125pt>
 File: figsATUCHA/2.png Graphic file (type png)
  <use figsATUCHA/2.png>
-Package pdftex.def Info: figsATUCHA/2.png used on input line 266.
+Package pdftex.def Info: figsATUCHA/2.png used on input line 289.
 (pdftex.def)             Requested size: 101.26128pt x 95.4522pt.
 
-<figsATUCHA/atucha_mesh2a.png, id=237, 1158.3275pt x 764.8575pt>
+<figsATUCHA/atucha_mesh2a.png, id=241, 1158.3275pt x 764.8575pt>
 File: figsATUCHA/atucha_mesh2a.png Graphic file (type png)
 
 <use figsATUCHA/atucha_mesh2a.png>
-Package pdftex.def Info: figsATUCHA/atucha_mesh2a.png used on input line 266.
+Package pdftex.def Info: figsATUCHA/atucha_mesh2a.png used on input line 289.
 (pdftex.def)             Requested size: 125.3714pt x 82.78076pt.
 
-<figsATUCHA/atucha_mesh3a.png, id=238, 1198.4775pt x 743.77875pt>
+<figsATUCHA/atucha_mesh3a.png, id=242, 1198.4775pt x 743.77875pt>
 File: figsATUCHA/atucha_mesh3a.png Graphic file (type png)
 
 <use figsATUCHA/atucha_mesh3a.png>
-Package pdftex.def Info: figsATUCHA/atucha_mesh3a.png used on input line 266.
+Package pdftex.def Info: figsATUCHA/atucha_mesh3a.png used on input line 289.
 (pdftex.def)             Requested size: 140.95229pt x 87.46777pt.
  [6
 
  <./figsATUCHA/2.png> <./figsATUCHA/atucha_mesh2a.png (PNG copy)> <./figsATUCHA
 /atucha_mesh3a.png (PNG copy)>]
-<figsCAREM/CAREM3.png, id=276, 913.4125pt x 622.325pt>
-File: figsCAREM/CAREM3.png Graphic file (type png)
-
-<use figsCAREM/CAREM3.png>
-Package pdftex.def Info: figsCAREM/CAREM3.png used on input line 311.
-(pdftex.def)             Requested size: 163.94992pt x 111.70029pt.
-
-<figsCAREM/CAREM1.png, id=277, 752.8125pt x 659.46375pt>
-File: figsCAREM/CAREM1.png Graphic file (type png)
-
-<use figsCAREM/CAREM1.png>
-Package pdftex.def Info: figsCAREM/CAREM1.png used on input line 311.
-(pdftex.def)             Requested size: 106.82701pt x 93.57205pt.
-
-<figsCAREM/mesh_detalle3.png, id=278, 500.87125pt x 451.6875pt>
-File: figsCAREM/mesh_detalle3.png Graphic file (type png)
-
-<use figsCAREM/mesh_detalle3.png>
-Package pdftex.def Info: figsCAREM/mesh_detalle3.png used on input line 311.
-(pdftex.def)             Requested size: 100.14995pt x 90.31522pt.
-
-Overfull \hbox (1.2188pt too wide) detected at line 311
-[][][] $[]$[][][][][][][][] $[]$[][][][][][] 
- []
-
-[7
-
- <./figsCAREM/CAREM3.png> <./figsCAREM/CAREM1.png> <./figsCAREM/mesh_detalle3.p
-ng (PNG copy)>]
-<figsGEOM/geom_mod_turb.png, id=316, 723.70375pt x 680.5425pt>
+<figsGEOM/geom_mod_turb.png, id=279, 723.70375pt x 680.5425pt>
 File: figsGEOM/geom_mod_turb.png Graphic file (type png)
 
 <use figsGEOM/geom_mod_turb.png>
-Package pdftex.def Info: figsGEOM/geom_mod_turb.png used on input line 351.
+Package pdftex.def Info: figsGEOM/geom_mod_turb.png used on input line 347.
 (pdftex.def)             Requested size: 57.86484pt x 54.41335pt.
- [8
+ [7
 
  <./figsGEOM/geom_mod_turb.png>]
-<figsATUCHA/US_DS.png, id=355, 397.485pt x 252.945pt>
-File: figsATUCHA/US_DS.png Graphic file (type png)
-
-<use figsATUCHA/US_DS.png>
-Package pdftex.def Info: figsATUCHA/US_DS.png used on input line 361.
+<figsATUCHA/US.png, id=320, 397.485pt x 252.945pt>
+File: figsATUCHA/US.png Graphic file (type png)
+ <use figsATUCHA/US.png>
+Package pdftex.def Info: figsATUCHA/US.png used on input line 359.
 (pdftex.def)             Requested size: 284.52756pt x 181.06657pt.
+
+[8
+
+ <./figsATUCHA/US.png>]
+<figsATUCHA/m_vs_DP.png, id=358, 397.485pt x 252.945pt>
+File: figsATUCHA/m_vs_DP.png Graphic file (type png)
+
+<use figsATUCHA/m_vs_DP.png>
+Package pdftex.def Info: figsATUCHA/m_vs_DP.png used on input line 384.
+(pdftex.def)             Requested size: 241.84842pt x 153.9064pt.
  [9
 
- <./figsATUCHA/US_DS.png>]
-<figsATUCHA/US_DS_fit_Q1.png, id=394, 397.485pt x 252.945pt>
-File: figsATUCHA/US_DS_fit_Q1.png Graphic file (type png)
+ <./figsATUCHA/m_vs_DP.png>]
+(./figsATUCHA/canal.tikz
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 
-<use figsATUCHA/US_DS_fit_Q1.png>
-Package pdftex.def Info: figsATUCHA/US_DS_fit_Q1.png used on input line 385.
-(pdftex.def)             Requested size: 227.62204pt x 144.85558pt.
- [10
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen218
+))) <figsATUCHA/vel/U_020US.png, id=400, 1555.8125pt x 764.8575pt>
+File: figsATUCHA/vel/U_020US.png Graphic file (type png)
 
- <./figsATUCHA/US_DS_fit_Q1.png>]
-<figsATUCHA/vel/U_0015US.png, id=435, 1488.56125pt x 764.8575pt>
-File: figsATUCHA/vel/U_0015US.png Graphic file (type png)
+<use figsATUCHA/vel/U_020US.png>
+Package pdftex.def Info: figsATUCHA/vel/U_020US.png used on input line 414.
+(pdftex.def)             Requested size: 136.57324pt x 67.13026pt.
 
-<use figsATUCHA/vel/U_0015US.png>
-Package pdftex.def Info: figsATUCHA/vel/U_0015US.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
-
-<figsATUCHA/vel/U_00075US.png, id=436, 1488.56125pt x 764.8575pt>
+<figsATUCHA/vel/U_00075US.png, id=401, 1488.56125pt x 764.8575pt>
 File: figsATUCHA/vel/U_00075US.png Graphic file (type png)
 
 <use figsATUCHA/vel/U_00075US.png>
-Package pdftex.def Info: figsATUCHA/vel/U_00075US.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
+Package pdftex.def Info: figsATUCHA/vel/U_00075US.png used on input line 414.
+(pdftex.def)             Requested size: 122.91507pt x 63.15053pt.
 
-<figsATUCHA/vel/U_half.png, id=437, 1488.56125pt x 764.8575pt>
+<figsATUCHA/vel/U_half.png, id=402, 1488.56125pt x 764.8575pt>
 File: figsATUCHA/vel/U_half.png Graphic file (type png)
 
 <use figsATUCHA/vel/U_half.png>
-Package pdftex.def Info: figsATUCHA/vel/U_half.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
+Package pdftex.def Info: figsATUCHA/vel/U_half.png used on input line 414.
+(pdftex.def)             Requested size: 122.91507pt x 63.15053pt.
 
-<figsATUCHA/vel/U_00075DS.png, id=438, 1488.56125pt x 764.8575pt>
+<figsATUCHA/vel/U_00075DS.png, id=403, 1488.56125pt x 764.8575pt>
 File: figsATUCHA/vel/U_00075DS.png Graphic file (type png)
 
 <use figsATUCHA/vel/U_00075DS.png>
-Package pdftex.def Info: figsATUCHA/vel/U_00075DS.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
+Package pdftex.def Info: figsATUCHA/vel/U_00075DS.png used on input line 414.
+(pdftex.def)             Requested size: 122.91507pt x 63.15053pt.
 
-<figsATUCHA/vel/U_0015DS.png, id=439, 1488.56125pt x 764.8575pt>
+<figsATUCHA/vel/U_0015DS.png, id=404, 1488.56125pt x 764.8575pt>
 File: figsATUCHA/vel/U_0015DS.png Graphic file (type png)
 
 <use figsATUCHA/vel/U_0015DS.png>
-Package pdftex.def Info: figsATUCHA/vel/U_0015DS.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
+Package pdftex.def Info: figsATUCHA/vel/U_0015DS.png used on input line 414.
+(pdftex.def)             Requested size: 122.91507pt x 63.15053pt.
 
-<figsATUCHA/vel/U_003DS.png, id=440, 1488.56125pt x 764.8575pt>
-File: figsATUCHA/vel/U_003DS.png Graphic file (type png)
+<figsATUCHA/vel/U_020DS.png, id=405, 1555.8125pt x 764.8575pt>
+File: figsATUCHA/vel/U_020DS.png Graphic file (type png)
 
-<use figsATUCHA/vel/U_003DS.png>
-Package pdftex.def Info: figsATUCHA/vel/U_003DS.png used on input line 403.
-(pdftex.def)             Requested size: 133.53326pt x 68.61246pt.
+<use figsATUCHA/vel/U_020DS.png>
+Package pdftex.def Info: figsATUCHA/vel/U_020DS.png used on input line 414.
+(pdftex.def)             Requested size: 136.57324pt x 67.13026pt.
+ [10
 
-Overfull \vbox (6.13408pt too high) detected at line 403
+ <./figsATUCHA/vel/U_020US.png (PNG copy)> <./figsATUCHA/vel/U_00075US.png (PNG
+ copy)> <./figsATUCHA/vel/U_half.png (PNG copy)> <./figsATUCHA/vel/U_00075DS.pn
+g (PNG copy)> <./figsATUCHA/vel/U_0015DS.png (PNG copy)> <./figsATUCHA/vel/U_02
+0DS.png (PNG copy)>]
+<figsCAREM/CAREM3.png, id=440, 913.4125pt x 622.325pt>
+File: figsCAREM/CAREM3.png Graphic file (type png)
+
+<use figsCAREM/CAREM3.png>
+Package pdftex.def Info: figsCAREM/CAREM3.png used on input line 459.
+(pdftex.def)             Requested size: 163.94992pt x 111.70029pt.
+
+<figsCAREM/CAREM1.png, id=441, 752.8125pt x 659.46375pt>
+File: figsCAREM/CAREM1.png Graphic file (type png)
+
+<use figsCAREM/CAREM1.png>
+Package pdftex.def Info: figsCAREM/CAREM1.png used on input line 459.
+(pdftex.def)             Requested size: 106.82701pt x 93.57205pt.
+
+<figsCAREM/mesh_detalle3.png, id=442, 500.87125pt x 451.6875pt>
+File: figsCAREM/mesh_detalle3.png Graphic file (type png)
+
+<use figsCAREM/mesh_detalle3.png>
+Package pdftex.def Info: figsCAREM/mesh_detalle3.png used on input line 459.
+(pdftex.def)             Requested size: 100.14995pt x 90.31522pt.
+
+Overfull \hbox (1.2188pt too wide) detected at line 459
+[][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
 [11
 
- <./figsATUCHA/vel/U_0015US.png (PNG copy)> <./figsATUCHA/vel/U_00075US.png (PN
-G copy)> <./figsATUCHA/vel/U_half.png (PNG copy)> <./figsATUCHA/vel/U_00075DS.p
-ng (PNG copy)> <./figsATUCHA/vel/U_0015DS.png (PNG copy)> <./figsATUCHA/vel/U_0
-03DS.png (PNG copy)>] <figsCAREM/US_DS.png, id=475, 397.485pt x 252.945pt>
+ <./figsCAREM/CAREM3.png> <./figsCAREM/CAREM1.png> <./figsCAREM/mesh_detalle3.p
+ng (PNG copy)>] <figsCAREM/US_DS.png, id=479, 397.485pt x 252.945pt>
 File: figsCAREM/US_DS.png Graphic file (type png)
 
 <use figsCAREM/US_DS.png>
-Package pdftex.def Info: figsCAREM/US_DS.png used on input line 413.
+Package pdftex.def Info: figsCAREM/US_DS.png used on input line 472.
 (pdftex.def)             Requested size: 284.52756pt x 181.06657pt.
  [12
 
  <./figsCAREM/US_DS.png>]
-<figsCAREM/CAREM4.png, id=513, 1067.99pt x 760.8425pt>
+<figsCAREM/CAREM4.png, id=517, 1067.99pt x 760.8425pt>
 File: figsCAREM/CAREM4.png Graphic file (type png)
 
 <use figsCAREM/CAREM4.png>
-Package pdftex.def Info: figsCAREM/CAREM4.png used on input line 423.
+Package pdftex.def Info: figsCAREM/CAREM4.png used on input line 482.
 (pdftex.def)             Requested size: 284.52756pt x 202.70198pt.
- [13
+
+Overfull \vbox (2.5345pt too high) detected at line 482
+ []
+
+[13
 
  <./figsCAREM/CAREM4.png>]
-<figsCAREM/CAREM5.png, id=550, 911.405pt x 758.835pt>
-File: figsCAREM/CAREM5.png Graphic file (type png)
+<figsCAREM/CAREM6.png, id=554, 1091.07625pt x 696.6025pt>
+File: figsCAREM/CAREM6.png Graphic file (type png)
 
-<use figsCAREM/CAREM5.png>
-Package pdftex.def Info: figsCAREM/CAREM5.png used on input line 433.
-(pdftex.def)             Requested size: 199.16928pt x 165.82106pt.
+<use figsCAREM/CAREM6.png>
+Package pdftex.def Info: figsCAREM/CAREM6.png used on input line 492.
+(pdftex.def)             Requested size: 284.52756pt x 181.65446pt.
  [14
 
- <./figsCAREM/CAREM5.png>] [15
+ <./figsCAREM/CAREM6.png (PNG copy)>] [15
+
+]
+File: figuras/ENIEF2017.png Graphic file (type png)
+
+<use figuras/ENIEF2017.png>
+Package pdftex.def Info: figuras/ENIEF2017.png used on input line 528.
+(pdftex.def)             Requested size: 42.67912pt x 33.42986pt.
+ [16
 
 ]
 \tf@nav=\write6
@@ -1382,32 +1515,34 @@ Package pdftex.def Info: figsCAREM/CAREM5.png used on input line 433.
 \tf@snm=\write8
 \openout8 = `presenta_enief2017.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 465.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 465.
-
-(./presenta_enief2017.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 531.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 531.
+ (./presenta_enief2017.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 465.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 465.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 531.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 531.
 Package rerunfilecheck Info: File `presenta_enief2017.out' has not changed.
-(rerunfilecheck)             Checksum: 2D9440A6EE9CDF4D20E5291D4D9F0E69;467.
+(rerunfilecheck)             Checksum: 8B35A20ABC8C7296403C83B0F4CB54EF;467.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 465.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
  ) 
 Here is how much of TeX's memory you used:
- 17859 strings out of 494899
- 336639 string characters out of 6177757
- 413257 words of memory out of 5000000
- 20594 multiletter control sequences out of 15000+600000
- 10143 words of font info for 39 fonts, out of 8000000 for 9000
- 64 hyphenation exceptions out of 8191
- 48i,16n,68p,398b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 22339 strings out of 494958
+ 439092 string characters out of 6179385
+ 501070 words of memory out of 5000000
+ 24983 multiletter control sequences out of 15000+600000
+ 11986 words of font info for 46 fonts, out of 8000000 for 9000
+ 40 hyphenation exceptions out of 8191
+ 48i,16n,68p,465b,1344s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
@@ -1417,10 +1552,10 @@ ts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy6.pfb>
-Output written on presenta_enief2017.pdf (15 pages, 5820175 bytes).
+Output written on presenta_enief2017.pdf (16 pages, 6019973 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 587 compressed objects within 6 object streams
- 41 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 692 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 255 words of extra memory for PDF output out of 10000 (max. 10000000)
 
