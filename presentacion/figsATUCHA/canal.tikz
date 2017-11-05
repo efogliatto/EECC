@@ -1,0 +1,40 @@
+\usetikzlibrary{arrows}
+\begin{tikzpicture}[scale=0.01]
+
+\draw [line width=0.5] (0,-235) -- (0,235) -- (50,235) -- (50,-235) -- cycle;
+\fill[black!60!white] (0,-8) -- (0,8) -- (50,8) -- (50,-8) -- cycle;
+
+\draw [line width=0.75, dashed] (-10,-200) -- (60,-200);
+\node at (-30,-200) {\scriptsize{(f)}};
+
+\draw [line width=0.75, dashed] (-10,-23) -- (60,-23);
+\node at (-30,-35) {\scriptsize{(e)}};
+
+\draw [line width=0.75, dashed] (-10,-15.5) -- (60,-15.5);
+\node at (80,-15) {\scriptsize{(d)}};
+
+\draw [line width=0.75, dashed] (-10,0) -- (60,0);
+\node at (-30,0) {\scriptsize{(c)}};
+
+\draw [line width=0.75, dashed] (-10,15.5) -- (60,15.5);
+\node at (80, 25.50) {\scriptsize{(b)}};
+
+\draw [line width=0.75, dashed] (-10,200) -- (60,200);
+\node at (-30,200) {\scriptsize{(a)}};
+
+\draw [->,>=stealth',line width=1.25] (25,-250) -- (25,-300); 
+
+%\draw [line width=0.5] (-235,0) -- (235,0) -- (235,50) -- (-235,50) -- cycle;
+%\fill[black!60!white] (-8,0) -- (8,0) -- (8,50) -- (-8,50) -- cycle;
+%\draw [line width=0.75, dashed] (-200,-10) -- (-200,60);
+%\node at (-200,-30) {\scriptsize{(a)}};
+%\draw [line width=0.75, dashed] (-15.5,-10) -- (-15.5,60);
+%\node at (-25.5,-30) {\scriptsize{(b)}};
+%\draw [line width=0.75, dashed] (0,-10) -- (0,60);
+%\node at (0,-30) {\scriptsize{(c)}};
+%\draw [line width=0.75, dashed] (15.5,-10) -- (15.5,60);
+%\node at (25.5,-30) {\scriptsize{(d)}};
+%\draw [line width=0.75, dashed] (200,-10) -- (200,60);
+%\node at (200,-30) {\scriptsize{(e)}};
+
+\end{tikzpicture}
