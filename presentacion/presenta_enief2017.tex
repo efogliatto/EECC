@@ -416,27 +416,33 @@
 }
 
 % =====================================================================================================
+\subsection{EC CAREM}
 \frame{
-  \frametitle{Geometría}
-  \framesubtitle{Elemento combustible símil CAREM}
+  \frametitle{Elemento combustible símil CAREM}
+  \framesubtitle{Geometría}
   
 %  \vspace{-0.25cm}
   \begin{columns}
     \column{0.65\textwidth}
     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
      \begin{figure}
-        \includegraphics[width=0.85\linewidth]{figsCAREM/CAREM3.png} \vspace{-3mm}
+        \includegraphics[width=0.85\linewidth]{figsCAREM/CAREM3.png} %% \vspace{-3mm}
         \caption{Geometría completa.}
     \end{figure}
     \end{minipage}
 
-    %\vspace{0.5cm}
-    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
 
+    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+      \vspace{1cm}
       \begin{itemize}
-      \item Símil CAREM de 16 vainas y 3 tubos de control.
-      \item Malla de 53M de celdas.
-      \item 4 capas adicionales en bordes.
+      \item Fracci\'on representativa del EC tipo CAREM
+        \begin{itemize}
+        \item 16 vainas combustibles
+        \item 3 barras de control
+        \end{itemize}
+
+      \item Uso en experimento de CHF
+      \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo}
       \end{itemize}
       
     \end{minipage}
@@ -444,24 +450,74 @@
     \column{0.45\textwidth}
     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
       \begin{figure}
-     \includegraphics[width=0.8\linewidth]{figsCAREM/CAREM1.png} \vspace{-3mm}
+     \includegraphics[width=0.8\linewidth]{figsCAREM/CAREM1.png} %% \vspace{-3mm}
       \caption{Vista de separador y resortes.}
       \end{figure}
     \end{minipage}
+
     
     \begin{minipage}[c][0.5\textheight][c]{\linewidth}
+      \vspace{5mm}
       \begin{figure}
         %\hspace{-1.5cm}   
-        \includegraphics[width=0.75\linewidth]{figsCAREM/mesh_detalle3.png} \vspace{-3mm}
+        \includegraphics[width=0.75\linewidth]{figsCAREM/mesh_detalle3.png} %% \vspace{-3mm}
         \caption{Detalle de malla en resorte.}
         \end{figure}
     \end{minipage}
+    
   \end{columns}
  
 }
 
+
+
+
 % ==========================================================================================================
-\subsection{EC CAREM}
+\frame{
+  \frametitle{Elemento combustible símil CAREM}
+  \framesubtitle{Metodolog\'ia de c\'alculo}
+
+  \begin{center}
+    
+    El tama\~no final de la malla necesaria para representar adecuadamente al separador y resortes limita la posibilidad de an\'alisis posterior.
+    \\ \textbf{Aproximaci\'on incremental}
+
+    \begin{columns}
+
+
+      \column{0.6\textwidth}
+      
+      \begin{enumerate}
+
+      \item Selecci\'on de modelo de turbulencia con EC s\'imil Atucha.
+
+      \item Resoluci\'on de una \'unica barra con resorte. Tama\~no de celda y selecci\'on de longitud de desarrollo
+
+      \item An\'alisis de sensibilidad de malla para un caso de EC completo (mayor caudal)
+
+      \item Resoluci\'on del problema final
+      
+      \end{enumerate}
+
+
+
+      \column{0.35\textwidth}
+
+      \begin{figure}
+        \includegraphics[width=0.75\linewidth]{figsCAREM/malla/malla.png} %% \vspace{-3mm}
+        \caption{Convergencia en malla.}
+      \end{figure}
+      
+      
+    \end{columns}
+    
+  \end{center}
+
+}
+
+
+
+% ==========================================================================================================
 \frame{
   \frametitle{Elemento combustible símil CAREM}
   \framesubtitle{Pérdida de carga}
