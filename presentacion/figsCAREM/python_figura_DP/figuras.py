@@ -30,7 +30,8 @@ for i in range(1):  # dos lineas de datos  NO, SEPARADAS XQ TIENEN DISTINTO Z
         datos1.append(datos[j][0].split('   '))
         print(datos1[j][3])
         z[j,i]=float(datos1[j][2])       # extraigo valor de z (es el mismo para todos los casos)
-        p[j,i]=(float(datos1[j][3])-(pf[0]*z[j,i]))*rho  # extraigo p y hago la conversion
+        # p[j,i]=(float(datos1[j][3])-(pf[0]*z[j,i]))*rho  # extraigo p y hago la conversion
+        p[j,i]=float( datos1[j][3] )  # extraigo p y hago la conversion
         
     datos=[]; datos1=[]
         
@@ -45,7 +46,8 @@ for i in range(1,2):  #  NO, SEPARADAS XQ TIENEN DISTINTO Z
         datos.append(k.split('\t'))  # limpio datos de archivo original
         datos1.append(datos[j][0].split('   '))
         z2[j,i]=float(datos1[j][2])       # extraigo valor de z (es el mismo para todos los casos)
-        p2[j,i]=(float(datos1[j][3])-(pf[0]*z2[j,i]))*rho  # extraigo p y hago la conversion
+        # p2[j,i]=(float(datos1[j][3])-(pf[0]*z2[j,i]))*rho  # extraigo p y hago la conversion
+        p2[j,i] = float( datos1[j][3] )
     datos=[]; datos1=[]
 
 
@@ -84,9 +86,9 @@ plt.show(); plt.tight_layout()
 plt.gcf().subplots_adjust(left=0.17)   # me cortaba el ylabel
 #plt.legend( loc="best", fontsize=font_size_legend)
 plt.xlabel('$z \ (m)$', fontsize=font_size_labels);
-plt.ylabel('$\Delta P \ (Pa)$', fontsize=font_size_labels)
+plt.ylabel('$\Delta P \ (u.a)$', fontsize=font_size_labels)
 plt.xlim((-0.08,0.16));
-plt.ylim((-75000,125000))
+# plt.ylim((-75000,125000))
 plt.xticks(np.arange(-0.08,0.17,0.02), fontsize=font_size_ticks);
 # plt.yticks(np.arange(-40000,110000,20000), fontsize=font_size_ticks);
 plt.grid()

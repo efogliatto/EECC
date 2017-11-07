@@ -36,7 +36,7 @@
 %\logo{\includegraphics[width=0.75cm,height=0.75cm]{figuras/ib.png}}
 
 \title[]{MODELADO COMPUTACIONAL DEL COMPORTAMIENTO HIDRODINÁMICO DE ELEMENTOS COMBUSTIBLES NUCLEARES}
-\author[]{\large{Julia Martorana, Ezequiel Fogliatto, Federico Teruel, Enzo Dari y Mariano Cantero}}
+\author[]{\large{Julia Martorana, Ezequiel Fogliatto, Federico Teruel, Enzo Dari y \underline{Mariano Cantero}}}
 \institute{\normalsize{Departamento de Mecánica Computacional \\ Centro Atómico Bariloche \\  Comisión Nacional de Energía Atómica \\  Instituto Balseiro - Universidad Nacional de Cuyo}}
 \date{}
 % -----------------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@
    \begin{minipage}{0.6\textwidth}
     \begin{figure}[!htb]
       \center
-      \includegraphics[width=5.25cm]{figsINTRO/atucha2.jpg} \vspace{-2mm}
+      \includegraphics[width=5.25cm]{figsINTRO/atucha2.jpg} %% \vspace{-2mm}
       \caption{Vista aérea de la Central Nuclear Atucha II.}
     \end{figure}
   \end{minipage}
@@ -89,7 +89,7 @@
      \vspace{-0.5cm}
     \begin{figure}[!htb]
       \center
-      \includegraphics[width=3cm]{figsINTRO/EECC_atuchaI.jpg} \vspace{-2mm}
+      \includegraphics[width=3cm]{figsINTRO/EECC_atuchaI.jpg} %% \vspace{-2mm}
       \caption{EECC de la CN Atucha I.}
     \end{figure}
   \end{minipage}
@@ -98,14 +98,15 @@
    \begin{minipage}{0.6\textwidth}
     \begin{figure}[!htb]
     \center
-    \includegraphics[width=4.75cm]{figsINTRO/CAREMfromCNEAfuelelement.jpg} \vspace{-2mm}
+    \includegraphics[width=4.75cm]{figsINTRO/CAREMfromCNEAfuelelement.jpg} %% \vspace{-2mm}
     \caption{Elemento combustible CAREM 25.} 
     \end{figure}
-  \end{minipage}
+   \end{minipage}
+   \vspace{-0.1cm}
   \begin{minipage}{0.35\textwidth}
     \begin{figure}[!htb]
       \center
-      \includegraphics[width=3cm]{figsINTRO/carem.png} \vspace{-2mm}
+      \includegraphics[width=3cm]{figsINTRO/carem.png} \vspace{-1mm}
       \caption{Esquema de funcionamiento del reactor CAREM.[1]}
     \end{figure}
   \end{minipage}
@@ -212,11 +213,11 @@
       \caption{Geometría construida en SALOME.}
     \end{figure}
   \end{minipage}
-  \vspace{5mm}
+  \vspace{2.5mm}
   
   \begin{minipage}{0.425\textwidth}
      \begin{figure}
-     \includegraphics[width=4cm]{figsGEOM/OpenFOAM_atucha.png} \vspace{-3mm}
+     \includegraphics[width=4cm]{figsGEOM/OpenFOAM_atucha.png} %% \vspace{-3mm}
       \caption{Malla creada en OpenFOAM.}
     \end{figure}
   \end{minipage}
@@ -224,8 +225,8 @@
   \begin{block}{OpenFOAM}
     Conjunto de bibliotecas de C++, destinadas a crear aplicaciones que involucren la resolución de EDP.
     \begin{itemize}
-    \item Generación de mallas hexahédricas.
-    \item Resolución de ecuaciones RANS mediante FVM.
+    \item Generación de mallas principalmente hexahédricas (snappyHexMesh).
+    \item Resolución de ecuaciones RANS mediante FVM (simpleFoam).
     \end{itemize}
   \end{block}
   \end{minipage}
@@ -239,19 +240,20 @@
 
 
 % =====================================================================================================
- \section{Geometría}
+\section{Modelos de EECC}
+
 \frame{
-  \frametitle{Geometría}
+  \frametitle{EECC analizados}
   \framesubtitle{Elemento combustible símil ATUCHA II}
 
 
   \begin{columns}
       \hspace{-1cm}
-    \column{0.65\textwidth}
+    \column{0.6\textwidth}
     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
      \begin{figure}
        %\includegraphics[width=0.55\linewidth]{figsATUCHA/atucha_mesh1a.png}
-     \includegraphics[width=0.525\linewidth]{figsATUCHA/2.png} \vspace{-3mm}
+     \includegraphics[width=0.525\linewidth]{figsATUCHA/2.png} %% \vspace{-3mm}
       \caption{Sección transversal del separador}
     \end{figure}
     \end{minipage}
@@ -259,7 +261,7 @@
     \vspace{0.5cm}
     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
       \begin{figure}
-        \includegraphics[width=0.65\linewidth]{figsATUCHA/atucha_mesh2a.png} \vspace{-3mm}
+        \includegraphics[width=0.65\linewidth]{figsATUCHA/atucha_mesh2a.png} %% \vspace{-3mm}
         \caption{Corte en el centro del separador.}
       \end{figure}
     \end{minipage}
@@ -270,22 +272,88 @@
       \item Símil CNAII 7 vainas.
       \item Malla de 14M de celdas.
       \item 4 capas adicionales en bordes.
+      \item<1- | alert@1> Existen mediciones de presi\'on sobre las barras
       \end{itemize}
     \end{minipage}
     
+  %%   \begin{minipage}[c][0.5\textheight][c]{\linewidth}
+  %%     \begin{figure}
+  %%       \hspace{-1.5cm}   
+  %%       \includegraphics[width=0.95\linewidth]{figsATUCHA/atucha_mesh3a.png} %% \vspace{-3mm}
+  %%       \caption{Detalle de capas adicionales.}
+  %%       \end{figure}
+  %%   \end{minipage}
+  %% \end{columns}
+
     \begin{minipage}[c][0.5\textheight][c]{\linewidth}
       \begin{figure}
-        \hspace{-1.5cm}   
-        \includegraphics[width=0.95\linewidth]{figsATUCHA/atucha_mesh3a.png} \vspace{-3mm}
-        \caption{Detalle de capas adicionales.}
+        %% \hspace{-1.5cm}   
+        \includegraphics[width=0.95\linewidth]{figsATUCHA/Nalin2.png} %% \vspace{-3mm}
+        \caption{Mediciones de presi\'on sobre las barras}
         \end{figure}
     \end{minipage}
   \end{columns}
 
+    
     \note{\begin{itemize}
       \item Esta geometría fue utilizada para realizar mediciones de pérdida de carga en el Laboratorio THI del CAB.
        \end{itemize}
     }
+    
+}
+
+
+\frame{
+
+  \frametitle{EECC analizados}
+  \framesubtitle{Elemento combustible símil CAREM}
+  
+%  \vspace{-0.25cm}
+  \begin{columns}
+    \column{0.65\textwidth}
+    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+     \begin{figure}
+        \includegraphics[width=0.85\linewidth]{figsCAREM/CAREM3.png} %% \vspace{-3mm}
+        \caption{Geometría completa.}
+    \end{figure}
+    \end{minipage}
+
+
+    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+      \vspace{1cm}
+      \begin{itemize}
+      \item Fracci\'on representativa del EC tipo CAREM
+        \begin{itemize}
+        \item 16 vainas combustibles
+        \item 3 barras de control
+        \end{itemize}
+
+      \item Uso en experimento de CHF
+      \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo}
+      \end{itemize}
+      
+    \end{minipage}
+    
+    \column{0.45\textwidth}
+    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+      \begin{figure}
+     \includegraphics[width=0.8\linewidth]{figsCAREM/CAREM1.png} %% \vspace{-3mm}
+      \caption{Vista de separador y resortes.}
+      \end{figure}
+    \end{minipage}
+
+    
+    \begin{minipage}[c][0.5\textheight][c]{\linewidth}
+      \vspace{5mm}
+      \begin{figure}
+        %\hspace{-1.5cm}   
+        \includegraphics[width=0.75\linewidth]{figsCAREM/mesh_detalle3.png} %% \vspace{-3mm}
+        \caption{Detalle de malla en resorte.}
+        \end{figure}
+    \end{minipage}
+    
+  \end{columns}
+ 
 }
 
 
@@ -417,57 +485,57 @@
 
 % =====================================================================================================
 \subsection{EC CAREM}
-\frame{
-  \frametitle{Elemento combustible símil CAREM}
-  \framesubtitle{Geometría}
+%% \frame{
+%%   \frametitle{Elemento combustible símil CAREM}
+%%   \framesubtitle{Geometría}
   
-%  \vspace{-0.25cm}
-  \begin{columns}
-    \column{0.65\textwidth}
-    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
-     \begin{figure}
-        \includegraphics[width=0.85\linewidth]{figsCAREM/CAREM3.png} %% \vspace{-3mm}
-        \caption{Geometría completa.}
-    \end{figure}
-    \end{minipage}
+%% %  \vspace{-0.25cm}
+%%   \begin{columns}
+%%     \column{0.65\textwidth}
+%%     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%%      \begin{figure}
+%%         \includegraphics[width=0.85\linewidth]{figsCAREM/CAREM3.png} %% \vspace{-3mm}
+%%         \caption{Geometría completa.}
+%%     \end{figure}
+%%     \end{minipage}
 
 
-    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
-      \vspace{1cm}
-      \begin{itemize}
-      \item Fracci\'on representativa del EC tipo CAREM
-        \begin{itemize}
-        \item 16 vainas combustibles
-        \item 3 barras de control
-        \end{itemize}
+%%     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%%       \vspace{1cm}
+%%       \begin{itemize}
+%%       \item Fracci\'on representativa del EC tipo CAREM
+%%         \begin{itemize}
+%%         \item 16 vainas combustibles
+%%         \item 3 barras de control
+%%         \end{itemize}
 
-      \item Uso en experimento de CHF
-      \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo}
-      \end{itemize}
+%%       \item Uso en experimento de CHF
+%%       \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo}
+%%       \end{itemize}
       
-    \end{minipage}
+%%     \end{minipage}
     
-    \column{0.45\textwidth}
-    \begin{minipage}[c][0.4\textheight][c]{\linewidth}
-      \begin{figure}
-     \includegraphics[width=0.8\linewidth]{figsCAREM/CAREM1.png} %% \vspace{-3mm}
-      \caption{Vista de separador y resortes.}
-      \end{figure}
-    \end{minipage}
+%%     \column{0.45\textwidth}
+%%     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
+%%       \begin{figure}
+%%      \includegraphics[width=0.8\linewidth]{figsCAREM/CAREM1.png} %% \vspace{-3mm}
+%%       \caption{Vista de separador y resortes.}
+%%       \end{figure}
+%%     \end{minipage}
 
     
-    \begin{minipage}[c][0.5\textheight][c]{\linewidth}
-      \vspace{5mm}
-      \begin{figure}
-        %\hspace{-1.5cm}   
-        \includegraphics[width=0.75\linewidth]{figsCAREM/mesh_detalle3.png} %% \vspace{-3mm}
-        \caption{Detalle de malla en resorte.}
-        \end{figure}
-    \end{minipage}
+%%     \begin{minipage}[c][0.5\textheight][c]{\linewidth}
+%%       \vspace{5mm}
+%%       \begin{figure}
+%%         %\hspace{-1.5cm}   
+%%         \includegraphics[width=0.75\linewidth]{figsCAREM/mesh_detalle3.png} %% \vspace{-3mm}
+%%         \caption{Detalle de malla en resorte.}
+%%         \end{figure}
+%%     \end{minipage}
     
-  \end{columns}
+%%   \end{columns}
  
-}
+%% }
 
 
 
@@ -539,34 +607,75 @@
 % ==========================================================================================================
 \frame{
   \frametitle{Elemento combustible símil CAREM}
-  \framesubtitle{Pérdida de carga}
+  \framesubtitle{Pérdida de carga. Resultados preliminares}
    \begin{figure}
-      \includegraphics[width=10cm]{figsCAREM/US_DS.png} %\vspace{-3mm}
+      \includegraphics[width=10cm]{figsCAREM/python_figura_DP/US_DS.png} %\vspace{-3mm}
      % \caption{Sección transversal del separador}
    \end{figure}
 
    \note{Gráfico a revisar por Ezequiel}
 }
 
-\frame{
- \frametitle{Elemento combustible símil CAREM}
-  \framesubtitle{Distribución de velocidades}
-   \begin{figure}
-       \includegraphics[width=10cm]{figsCAREM/CAREM4.png} %\vspace{-3mm}
-       \caption{Vista de cortes: velocidad principal en el plano transversal en el centro del separador y en un plano longitudinal. Flujo de abajo hacia arriba.}
-   \end{figure}
-  
-}
+
 
 \frame{
  \frametitle{Elemento combustible símil CAREM}
-  \framesubtitle{Distribución de velocidades}
+ \framesubtitle{Distribución de velocidades. Resultados preliminares}
+
+
+ \begin{columns}
+
+   \column{0.5\textwidth}
+   
    \begin{figure}
-       \includegraphics[width=10cm]{figsCAREM/CAREM6.png} %\vspace{-3mm}
+       \includegraphics[width=0.9\textwidth]{figsCAREM/CAREM4.png} 
+       \caption{Vista de cortes: velocidad principal en el plano transversal en el centro del separador y en un plano longitudinal. Flujo de abajo hacia arriba.}
+   \end{figure}
+
+
+   \column{0.5\textwidth}
+
+   \begin{figure}
+       \includegraphics[width=0.9\textwidth]{figsCAREM/CAREM6.png} %\vspace{-3mm}
        \caption{Velocidad principal en un plano longitudinal. Flujo de izquierda a derecha.}
    \end{figure}
+   
+
+ \end{columns}
   
 }
+
+%% \frame{
+%%  \frametitle{Elemento combustible símil CAREM}
+%%   \framesubtitle{Distribución de velocidades. Resultados preliminares}
+%%    \begin{figure}
+%%        \includegraphics[width=10cm]{figsCAREM/CAREM6.png} %\vspace{-3mm}
+%%        \caption{Velocidad principal en un plano longitudinal. Flujo de izquierda a derecha.}
+%%    \end{figure}
+  
+%% }
+
+
+
+%% \frame{
+%%  \frametitle{Elemento combustible símil CAREM}
+%%   \framesubtitle{Distribución de velocidades. Resultados preliminares}
+%%    \begin{figure}
+%%        \includegraphics[width=10cm]{figsCAREM/CAREM4.png} %\vspace{-3mm}
+%%        \caption{Vista de cortes: velocidad principal en el plano transversal en el centro del separador y en un plano longitudinal. Flujo de abajo hacia arriba.}
+%%    \end{figure}
+  
+%% }
+
+%% \frame{
+%%  \frametitle{Elemento combustible símil CAREM}
+%%   \framesubtitle{Distribución de velocidades. Resultados preliminares}
+%%    \begin{figure}
+%%        \includegraphics[width=10cm]{figsCAREM/CAREM6.png} %\vspace{-3mm}
+%%        \caption{Velocidad principal en un plano longitudinal. Flujo de izquierda a derecha.}
+%%    \end{figure}
+  
+%% }
 
 
 \section{Conclusiones}
