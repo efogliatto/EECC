@@ -474,13 +474,17 @@
 
 % ==========================================================================================================
 \frame{
+
   \frametitle{Elemento combustible símil CAREM}
+
   \framesubtitle{Metodolog\'ia de c\'alculo}
 
   \begin{center}
     
     El tama\~no final de la malla necesaria para representar adecuadamente al separador y resortes limita la posibilidad de an\'alisis posterior.
     \\ \textbf{Aproximaci\'on incremental}
+
+    \vspace{0.5cm}
 
     \begin{columns}
 
@@ -495,7 +499,17 @@
 
       \item An\'alisis de sensibilidad de malla para un caso de EC completo (mayor caudal)
 
-      \item Resoluci\'on del problema final
+      \item<1- |alert@1> EC del experimento. Modelo con 16 BC, separador y resortes.
+
+        \begin{itemize}
+
+        \item P\'erdida de carga en separador
+
+        \item Puntos calientes
+
+        \end{itemize}
+
+      \item An\'alisis de EC de CAREM.
       
       \end{enumerate}
 
@@ -504,8 +518,13 @@
       \column{0.35\textwidth}
 
       \begin{figure}
-        \includegraphics[width=0.75\linewidth]{figsCAREM/malla/malla.png} %% \vspace{-3mm}
-        \caption{Convergencia en malla.}
+        \includegraphics[width=0.75\linewidth]{figsCAREM/barraConResorte.png} 
+        \caption{Modelo representativo}
+      \end{figure}
+      
+      \begin{figure}
+        \includegraphics[width=0.75\linewidth]{figsCAREM/malla/malla.png}
+        \caption{Convergencia en malla}
       \end{figure}
       
       
