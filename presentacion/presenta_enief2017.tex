@@ -364,34 +364,63 @@
 \frame{
   \frametitle{Modelos de turbulencia}
 
-    \begin{minipage}[c]{0.65\linewidth}
-      \begin{itemize}
-      \item Geometría: canal circular con 7 vainas.
-      \item Condición de borde periódica en la dirección del flujo.
-      \item Análisis de modelos de turbulencia:
-      \end{itemize}
-    \end{minipage}
-    \begin{minipage}[c]{0.3\linewidth}
-      \begin{figure}
-        \center
-      \includegraphics[width=0.65\linewidth]{figsGEOM/geom_mod_turb.png} \vspace{-3mm}
-      \caption{Sección transversal del canal analizado.}
-    \end{figure}
-    \end{minipage}
+    %% \begin{minipage}[c]{0.65\linewidth}
+    %%   \begin{itemize}
+    %%   \item Referencia: mediciones para combustible s\'imil Atucha
+    %%   \item Canal circular con 7 vainas.
+    %%   \item Condición de borde periódica en la dirección del flujo.
+    %%   \item Inter\'es en el uso de modelos de \emph{bajo Re}
+    %%   \end{itemize}
+    %% \end{minipage}
+
     
+    %% \begin{minipage}[c]{0.3\linewidth}
+    %%   \begin{figure}
+    %%     \center
+    %%   \includegraphics[width=0.65\linewidth]{figsGEOM/geom_mod_turb.png} %% \vspace{-3mm}
+    %%   %% \caption{Sección transversal del canal analizado.}
+    %% \end{figure}
+    %% \end{minipage}
+
+
+  \begin{columns}
+
+    \column{0.65\linewidth}
+
+    \begin{itemize}
+    \item Referencia: mediciones para combustible s\'imil Atucha
+    \item Canal circular con 7 vainas.
+    \item Condición de borde periódica en la dirección del flujo.
+    \item Inter\'es en el uso de modelos de \emph{bajo Re}
+    \end{itemize}
+
+
+    \column{0.35\linewidth}
+
+    \begin{figure}
+      \center
+      \includegraphics[width=0.75\linewidth]{figsGEOM/geom_mod_turb.png} %% \vspace{-3mm}
+      %% \caption{Sección transversal del canal analizado.}
+    \end{figure}
+    
+    
+  \end{columns}
+  
+
+  \vspace{0.9cm}
+  
    \begin{table}[ht]
-%      \setlength{\tabcolsep}{10pt}
         \centering
         \begin{tabular}{c c  c }
             \hline
-            \bf Modelo & \bf CB   &  \bf Pendiente \\
+            \bf Modelo & \bf Condiciones de borde   &  $\nabla P_m$  \\
             \hline
             \hline
             $k$ - $\omega$ SST    & k: kLowReWallFun, $\omega$: omegaWallFun  &  4354\\ % 4.364
             $k$ - $\omega$ SST    & k: fixedValue (0), $\omega$: omegaWallFun  &  4360\\ % 4.3702
             $k$ - $\omega$  & k: kLowReWallFun, $\omega$: omegaWallFun  &  4662 \\ % 4.6729
             $k$ - $\omega$  & k: fixedValue (0), $\omega$: omegaWallFun  &  4820 \\ %4.831
-            Spallart Almaras & $\nu_t$: nutSpaldingWallFunction &  4840 \\ %4.851
+            \alert{Spalart-Allmaras} & \alert{$\nu_t$: nutSpaldingWallFunction} &  \alert{4840} \\ %4.851
             \hline
             Mediciones &  & 5509 \\
             \hline
@@ -557,15 +586,15 @@
     \begin{columns}
 
 
-      \column{0.6\textwidth}
+      \column{0.55\textwidth}
       
       \begin{enumerate}
 
       \item Selecci\'on de modelo de turbulencia con EC s\'imil Atucha.
 
-      \item Resoluci\'on de una \'unica barra con resorte. Tama\~no de celda y selecci\'on de longitud de desarrollo
+      \item Resoluci\'on de una \'unica barra con resorte. Discretizaci\'on espacial y selecci\'on de longitud de desarrollo.
 
-      \item An\'alisis de sensibilidad de malla para un caso de EC completo (mayor caudal)
+      \item An\'alisis de sensibilidad de malla para un caso de EC completo (mayor caudal).
 
       \item<1- |alert@1> EC del experimento. Modelo con 16 BC, separador y resortes.
 
@@ -583,7 +612,7 @@
 
 
 
-      \column{0.35\textwidth}
+      \column{0.4\textwidth}
 
       \begin{figure}
         \includegraphics[width=0.75\linewidth]{figsCAREM/barraConResorte.png} 
@@ -682,6 +711,20 @@
 \frame{
   \frametitle{Conclusiones}
 
+  %% \begin{itemize}
+  %%   \item Se llevaron a cabo simulaciones RANS en OpenFOAM.
+  %%   \item Las geometrías se mallaron con la herramienta SnappyHexMesh de OpenFOAM.
+  %%   \item Se realizó un análisis previo de varios modelos de turbulencia en un canal simple.
+  %%   \item Se calculó la pérdida de carga en un EC símil CNAII de 7 vainas y se comparó con mediciones experimentales.
+  %%     \begin{itemize}
+  %%     \item Similares pérdidas de carga longitudinales.
+  %%     \item Diferencias del 30\% en las pérdidas de carga locales.
+  %%     \end{itemize}
+  %%   \item Se realizó el cálculo de un EC símil CAREM de 16 vainas.
+  %% \end{itemize}
+
+
+
   \begin{itemize}
     \item Se llevaron a cabo simulaciones RANS en OpenFOAM.
     \item Las geometrías se mallaron con la herramienta SnappyHexMesh de OpenFOAM.
@@ -694,7 +737,8 @@
     \item Se realizó el cálculo de un EC símil CAREM de 16 vainas.
   \end{itemize}
 
-  \note{Estas conclusiones me parecen un poco incompletas.}
+
+ 
 }
 
 \frame[plain]{
