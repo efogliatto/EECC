@@ -709,7 +709,7 @@
 
 \section{Conclusiones}
 \frame{
-  \frametitle{Conclusiones}
+  \frametitle{Resumen y conclusiones}
 
   %% \begin{itemize}
   %%   \item Se llevaron a cabo simulaciones RANS en OpenFOAM.
@@ -726,15 +726,17 @@
 
 
   \begin{itemize}
-    \item Se llevaron a cabo simulaciones RANS en OpenFOAM.
-    \item Las geometrías se mallaron con la herramienta SnappyHexMesh de OpenFOAM.
-    \item Se realizó un análisis previo de varios modelos de turbulencia en un canal simple.
-    \item Se calculó la pérdida de carga en un EC símil CNAII de 7 vainas y se comparó con mediciones experimentales.
-      \begin{itemize}
-      \item Similares pérdidas de carga longitudinales.
-      \item Diferencias del 30\% en las pérdidas de carga locales.
-      \end{itemize}
-    \item Se realizó el cálculo de un EC símil CAREM de 16 vainas.
+    \setlength\itemsep{1em}
+  \item Se llevaron a cabo simulaciones de flujo de refrigerante en \textbf{elementos combustibles} de reactores nucleares.
+  \item Empleo de las herramientas computacionales \textbf{SALOME} para preparaci\'on de modelos CAD, y \textbf{OpenFOAM} para generaci\'on de malla (\textbf{snappyHexMesh}) y resoluci\'on de ecuaciones (\textbf{simpleFoam}).
+  \item Estudio de EECC representativos de CNAII. Comparaci\'on de \textbf{p\'erdida de carga} con resultados experimentales y evaluaci\'on de diferentes \textbf{modelos de turbulencia} de bajo Re.
+    \begin{itemize}
+    \item Similares p\'erdidas de carga longitudinales con Spalart-Allmaras.
+    \item Diferencias del 30\% en las p\'erdidas de carga locales.
+    \end{itemize}
+
+  \item Estudio de EECC representativos de CAREM. An\'alisis de modelos representativos de menor costo computacional para determinar modelo final. C\'alculo de EC con 16 vainas combustibles, 3 barras de control, separador y resortes con nivel de detalle real.
+    
   \end{itemize}
 
 
