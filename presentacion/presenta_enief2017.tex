@@ -5,7 +5,7 @@
 
 \usepackage[spanish, es-noshorthands]{babel} 
 \usepackage[utf8]{inputenc}
-
+%% \usepackage{subcaption}
 \usepackage{textpos} %textblock
 %% \usepackage{tikz,pgfplots}
 %% %\setbeamertemplate{navigation symbols}{}
@@ -674,6 +674,10 @@
   
 }
 
+
+
+
+
 %% \frame{
 %%  \frametitle{Elemento combustible símil CAREM}
 %%   \framesubtitle{Distribución de velocidades. Resultados preliminares}
@@ -705,6 +709,38 @@
 %%    \end{figure}
   
 %% }
+
+
+
+
+
+
+
+
+
+
+\frame{
+  
+ \frametitle{Elemento combustible símil CAREM}
+ \framesubtitle{Distribución de velocidades. Resultados preliminares}
+
+ 
+ \begin{figure}[ht]
+   \captionsetup[subfloat]{singlelinecheck=off,justification=raggedright}
+   \centering
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_m00075.png}} \hspace{5mm}
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_0.png}}
+   %% \vspace{-5mm}
+   
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_00075.png}} \hspace{5mm}
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_012.png} }
+   %% \vspace{-3mm}
+   \caption{Distribución de la velocidad principal en secciones transversales: a) a 7.5mm US del separador, b) en la mitad del separador, c) a 7.5mm DS del separador, d) a 12mm DS del separador.}
+ \end{figure}
+ 
+
+}
+
 
 
 \section{Conclusiones}
