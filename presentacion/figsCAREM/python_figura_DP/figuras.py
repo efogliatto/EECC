@@ -28,7 +28,7 @@ for i in range(1):  # dos lineas de datos  NO, SEPARADAS XQ TIENEN DISTINTO Z
     for j,k in enumerate(lineas):
         datos.append(k.split('\t'))  # limpio datos de archivo original
         datos1.append(datos[j][0].split('   '))
-        print(datos1[j][3])
+        # print(datos1[j][3])
         z[j,i]=float(datos1[j][2])       # extraigo valor de z (es el mismo para todos los casos)
         # p[j,i]=(float(datos1[j][3])-(pf[0]*z[j,i]))*rho  # extraigo p y hago la conversion
         p[j,i]=float( datos1[j][3] )  # extraigo p y hago la conversion
@@ -60,8 +60,10 @@ h=np.zeros([1,2]); lineal_US=np.zeros([len(z),1]); lineal_DS=np.zeros([len(z),1]
 DP=np.zeros([1]); coef_corr=np.zeros([2,2,1]);
 for i in range(1):   # todo es "(1)" porque viene copiado de otro loop
     h[i,:]=np.polyfit(z[s1:s2,i],p[s1:s2,i],1); # pendiente (h[0]) y ordenada al origen (h[1])
+    print(h)
     lineal_US[:,i] = z[:,0]*h[i,0] + h[i,1]; # función lineal US
     lineal_DS[:,i] = z[:,0]*h[i,0] + (p[p_DS,i]-h[i,0]*z[p_DS,0]);
+    print( (p[p_DS,i]-h[i,0]*z[p_DS,0]) )
     DP[i] = h[i,1] - (p[p_DS,i] - h[i,0]*z[p_DS,0]); # delta p = ordenada al orig US - ord al orig DS
     coef_corr[:,:,i]= np.corrcoef(np.polyval(h[i,:],z[s1:s2,i]), p[s1:s2,i]) # correlation coeff
 

@@ -231,9 +231,11 @@
   \end{block}
   \end{minipage}
 
-    \note{\begin{itemize}
-      \item SnappyHexMesh es una utilidad de OpenFOAM que permite generar mallas hexahédricas para geometrías arbitrarias. Su desempeño es muy bueno.
-       \end{itemize}
+    \note{
+      \begin{itemize}
+      \item SnappyHexMesh es una utilidad de OpenFOAM que permite generar mallas hexahédricas para geometrías arbitrarias. Su desempeño es muy bueno y puede ejecutarse en paralelo. Ideal para problemas grandes.
+      \item Todo software libre
+      \end{itemize}
     }
 
 }
@@ -254,7 +256,7 @@
      \begin{figure}
        %\includegraphics[width=0.55\linewidth]{figsATUCHA/atucha_mesh1a.png}
      \includegraphics[width=0.525\linewidth]{figsATUCHA/2.png} %% \vspace{-3mm}
-      \caption{Sección transversal del separador}
+      \caption{Sección transversal del separador.}
     \end{figure}
     \end{minipage}
 
@@ -272,7 +274,7 @@
       \item Símil CNAII 7 vainas.
       \item Malla de 14M de celdas.
       \item 4 capas adicionales en bordes.
-      \item<1- | alert@1> Existen mediciones de presi\'on sobre las barras
+      \item<1- | alert@1> Existen mediciones de presi\'on sobre las barras.
       \end{itemize}
     \end{minipage}
     
@@ -289,16 +291,19 @@
       \begin{figure}
         %% \hspace{-1.5cm}   
         \includegraphics[width=0.95\linewidth]{figsATUCHA/Nalin2.png} %% \vspace{-3mm}
-        \caption{Mediciones de presi\'on sobre las barras}
+        \caption{Mediciones de presi\'on sobre las barras.}
         \end{figure}
     \end{minipage}
   \end{columns}
 
     
-    \note{\begin{itemize}
-      \item Esta geometría fue utilizada para realizar mediciones de pérdida de carga en el Laboratorio THI del CAB.
-       \end{itemize}
-    }
+  \note{
+    \begin{itemize}
+      \item La idea de juntar esta slide con la siguiente es para justificar la l\'inea de trabajo seguida. Si bien en un futuro hay que analizar CNAII, como ya hay mediciones de un EC similar, se tom\'o esta base para verificar cuantitativamente la simulaci\'on con OpenFOAM.
+      
+    \item Esta geometría fue utilizada para realizar mediciones de pérdida de carga en el Laboratorio THI del CAB.
+    \end{itemize}
+  }
     
 }
 
@@ -322,14 +327,14 @@
     \begin{minipage}[c][0.4\textheight][c]{\linewidth}
       \vspace{1cm}
       \begin{itemize}
-      \item Fracci\'on representativa del EC tipo CAREM
+      \item Fracci\'on representativa del EC tipo CAREM.
         \begin{itemize}
-        \item 16 vainas combustibles
-        \item 3 barras de control
+        \item 16 vainas combustibles.
+        \item 3 barras de control.
         \end{itemize}
 
-      \item Uso en experimento de CHF
-      \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo}
+      \item Uso en experimento de CHF.
+      \item Malla de $\sim$60 M de celdas para separador con nivel de detalle necesario. \textbf{Limitaci\'on en tiempo de c\'alculo.}
       \end{itemize}
       
     \end{minipage}
@@ -353,6 +358,11 @@
     \end{minipage}
     
   \end{columns}
+
+  \note{
+    Similar a la anterior. Destacar el nivel de detalle del separador, sobre todo en la zona de contacto con las barras. Necesidad de buena discretizaci\'on, principalmente para poder resolverel problema t\'ermico.
+    Mencionar malla grande, y que requiere un an\'alisis no tan directo.
+  }
  
 }
 
@@ -388,10 +398,10 @@
     \column{0.65\linewidth}
 
     \begin{itemize}
-    \item Referencia: mediciones para combustible s\'imil Atucha
+    \item Referencia: mediciones para combustible s\'imil Atucha.
     \item Canal circular con 7 vainas.
     \item Condición de borde periódica en la dirección del flujo.
-    \item Inter\'es en el uso de modelos de \emph{bajo Re}
+    \item Inter\'es en el uso de modelos de \emph{bajo Re}.
     \end{itemize}
 
 
@@ -629,6 +639,10 @@
     
   \end{center}
 
+
+  \note{
+    Antes de pasar a los resultados crudos, mecionar c\'omo fue la metodolog\'ia de c\'alculo para este problema grande
+  }
 }
 
 
@@ -641,8 +655,6 @@
       \includegraphics[width=10cm]{figsCAREM/python_figura_DP/US_DS.png} %\vspace{-3mm}
      % \caption{Sección transversal del separador}
    \end{figure}
-
-   \note{Gráfico a revisar por Ezequiel}
 }
 
 
@@ -728,14 +740,14 @@
  \begin{figure}[ht]
    \captionsetup[subfloat]{singlelinecheck=off,justification=raggedright}
    \centering
-   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_m00075.png}} \hspace{5mm}
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_m0015.png}} \hspace{5mm}
    \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_0.png}}
    %% \vspace{-5mm}
    
-   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_00075.png}} \hspace{5mm}
+   \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_0015.png}} \hspace{5mm}
    \subfloat[]{\includegraphics[width=0.35\textwidth]{figsCAREM/U_Z_012.png} }
    %% \vspace{-3mm}
-   \caption{Distribución de la velocidad principal en secciones transversales: a) a 7.5mm US del separador, b) en la mitad del separador, c) a 7.5mm DS del separador, d) a 12mm DS del separador.}
+   \caption{Distribución de la velocidad principal en secciones transversales: a) a 15mm US del separador, b) en la mitad del separador, c) a 15mm DS del separador, d) a 120mm DS del separador.}
  \end{figure}
  
 
